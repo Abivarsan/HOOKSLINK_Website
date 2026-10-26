@@ -75,7 +75,7 @@
     --fs-2xl: clamp(1.875rem, 1.6rem + 1.3vw, 2.375rem);
     --fs-3xl: clamp(2.25rem, 1.85rem + 1.9vw, 3rem);
     --fs-4xl: clamp(2.75rem, 2.1rem + 2.8vw, 4rem);
-    --fs-hero: clamp(3rem, 2.2rem + 3.8vw, 5rem);
+    --fs-hero: clamp(2.35rem, 1.8rem + 2.8vw, 4.75rem);
 
     /* Spacing System (4px Base Grid) */
     --space-1: 0.25rem;  /* 4px */
@@ -117,7 +117,13 @@
     /* Layout Dimensions */
     --container-max: 76rem; /* 1216px */
     --container-narrow: 56rem; /* 896px */
-    --header-height: 4.75rem;
+    --header-height: 4.25rem; /* 68px on mobile for optimal screen real estate */
+  }
+
+  @media (min-width: 64rem) {
+    :root {
+      --header-height: 4.75rem; /* 76px on desktop */
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
