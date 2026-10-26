@@ -18,8 +18,6 @@ async function run() {
   }
 
   // 1. Process Brand Logos
-  // Logo 1 BBox: minX: 132, minY: 182, maxX: 1475, maxY: 708, w: 1344, h: 527
-  // Add 16px padding
   const extractDark = { left: 120, top: 170, width: 1368, height: 550 };
   await sharp('assets/images/source/brand/hookslink_logo1.jpeg')
     .extract(extractDark)
@@ -31,32 +29,31 @@ async function run() {
     .png()
     .toFile('assets/images/brand/hookslink-logo-dark.png');
 
-  // Also create a transparent version of logo1 where black background becomes transparent
+  // Transparent dark logo (for dark surfaces)
   const rawDark = await sharp('assets/images/source/brand/hookslink_logo1.jpeg')
     .extract(extractDark)
     .ensureAlpha()
     .raw()
     .toBuffer({ resolveWithObject: true });
 
-  const { data, info } = rawDark;
-  const transData = Buffer.from(data);
-  for (let i = 0; i < transData.length; i += 4) {
-    const r = transData[i];
-    const g = transData[i + 1];
-    const b = transData[i + 2];
+  const transDarkData = Buffer.from(rawDark.data);
+  for (let i = 0; i < transDarkData.length; i += 4) {
+    const r = transDarkData[i];
+    const g = transDarkData[i + 1];
+    const b = transDarkData[i + 2];
     const maxVal = Math.max(r, g, b);
     if (maxVal < 15) {
-      transData[i + 3] = 0; // Pure transparent for black background
+      transDarkData[i + 3] = 0;
     } else if (maxVal < 60) {
-      transData[i + 3] = Math.round(((maxVal - 15) / 45) * 255);
+      transDarkData[i + 3] = Math.round(((maxVal - 15) / 45) * 255);
     }
   }
 
-  await sharp(transData, { raw: { width: info.width, height: info.height, channels: 4 } })
+  await sharp(transDarkData, { raw: { width: rawDark.info.width, height: rawDark.info.height, channels: 4 } })
     .webp({ quality: 95 })
     .toFile('assets/images/brand/hookslink-logo-transparent.webp');
 
-  await sharp(transData, { raw: { width: info.width, height: info.height, channels: 4 } })
+  await sharp(transDarkData, { raw: { width: rawDark.info.width, height: rawDark.info.height, channels: 4 } })
     .png()
     .toFile('assets/images/brand/hookslink-logo-transparent.png');
 
@@ -71,20 +68,46 @@ async function run() {
     .png()
     .toFile('assets/images/brand/hookslink-logo-light.png');
 
+  // Transparent light logo (for white & light surfaces)
+  const rawLight = await sharp('assets/images/source/brand/hookslink_logo2.jpeg')
+    .extract(extractDark)
+    .ensureAlpha()
+    .raw()
+    .toBuffer({ resolveWithObject: true });
+
+  const transLightData = Buffer.from(rawLight.data);
+  for (let i = 0; i < transLightData.length; i += 4) {
+    const r = transLightData[i];
+    const g = transLightData[i + 1];
+    const b = transLightData[i + 2];
+    const minVal = Math.min(r, g, b);
+    if (minVal > 240) {
+      transLightData[i + 3] = 0;
+    } else if (minVal > 210) {
+      transLightData[i + 3] = Math.round(((240 - minVal) / 30) * 255);
+    }
+  }
+
+  await sharp(transLightData, { raw: { width: rawLight.info.width, height: rawLight.info.height, channels: 4 } })
+    .webp({ quality: 95 })
+    .toFile('assets/images/brand/hookslink-logo-light-transparent.webp');
+
+  await sharp(transLightData, { raw: { width: rawLight.info.width, height: rawLight.info.height, channels: 4 } })
+    .png()
+    .toFile('assets/images/brand/hookslink-logo-light-transparent.png');
+
   console.log('Brand logos created.');
 
-  // 2. Favicons & App Icons (using the iconic infinity/hooks mark)
-  // The infinity symbol is centered in the logo: x around 380 to 760, y around 260 to 620
-  const infinityBBox = { left: 400, top: 220, width: 800, height: 460 };
-  // Generate square app icon with padding
+  // 2. Favicons & App Icons
   const svgFavicon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <defs>
     <linearGradient id="hl-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#003CFF"/>
-      <stop offset="100%" stop-color="#16C8FF"/>
+      <stop offset="0%" stop-color="#0044FF"/>
+      <stop offset="100%" stop-color="#0099FF"/>
     </linearGradient>
   </defs>
-  <rect width="100" height="100" rx="22" fill="#000000"/>
+  <rect width="100" height="100" rx="22" fill="#FFFFFF"/>
+  <rect width="98" height="98" x="1" y="1" rx="21" fill="none" stroke="rgba(0,0,0,0.06)" stroke-width="2"/>
   <!-- Decorative arcs -->
   <path d="M 28 34 A 24 24 0 0 1 72 34" fill="none" stroke="url(#hl-grad)" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
   <path d="M 28 66 A 24 24 0 0 0 72 66" fill="none" stroke="url(#hl-grad)" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
@@ -125,7 +148,6 @@ async function run() {
     const baseName = path.basename(cf, '.png');
     const inPath = path.join('assets/images/source/clients', cf);
     
-    // Trim client logo and fit nicely into 320x160 with transparent padding
     await sharp(inPath)
       .trim()
       .resize(240, 120, { fit: 'inside', background: { r: 0, g: 0, b: 0, alpha: 0 } })
@@ -147,14 +169,12 @@ async function run() {
     const baseName = path.basename(pf, path.extname(pf));
     const inPath = path.join('assets/images/source/projects', pf);
 
-    // Create a 16:10 mockup top-crop card preview (800x500)
     await sharp(inPath)
       .extract({ left: 0, top: 0, width: (await sharp(inPath).metadata()).width, height: Math.round((await sharp(inPath).metadata()).width * 0.75) })
       .resize(800, 600, { fit: 'cover', position: 'top' })
       .webp({ quality: 85 })
       .toFile(path.join('assets/images/projects', `${baseName}-card.webp`));
 
-    // Full preview
     await sharp(inPath)
       .resize(600)
       .webp({ quality: 80 })
@@ -162,24 +182,24 @@ async function run() {
   }
   console.log('Project images processed.');
 
-  // 5. OpenGraph Image (1200x630)
+  // 5. OpenGraph Image (1200x630) - Light high-contrast modern card
   const ogSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
-    <radialGradient id="og-glow" cx="50%" cy="40%" r="60%">
-      <stop offset="0%" stop-color="#003CFF" stop-opacity="0.35"/>
-      <stop offset="60%" stop-color="#16C8FF" stop-opacity="0.08"/>
-      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    <radialGradient id="og-glow" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#0044FF" stop-opacity="0.12"/>
+      <stop offset="60%" stop-color="#0099FF" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="og-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#003CFF"/>
-      <stop offset="100%" stop-color="#16C8FF"/>
+      <stop offset="0%" stop-color="#0044FF"/>
+      <stop offset="100%" stop-color="#0099FF"/>
     </linearGradient>
   </defs>
-  <rect width="1200" height="630" fill="#000000"/>
+  <rect width="1200" height="630" fill="#FFFFFF"/>
   <rect width="1200" height="630" fill="url(#og-glow)"/>
   
   <!-- Subtle tech grid -->
-  <g stroke="rgba(255,255,255,0.04)" stroke-width="1">
+  <g stroke="rgba(0,0,0,0.04)" stroke-width="1">
     <line x1="0" y1="105" x2="1200" y2="105"/>
     <line x1="0" y1="210" x2="1200" y2="210"/>
     <line x1="0" y1="315" x2="1200" y2="315"/>
@@ -193,15 +213,15 @@ async function run() {
   </g>
 
   <!-- Brand badge -->
-  <rect x="470" y="80" width="260" height="36" rx="18" fill="rgba(22, 200, 255, 0.1)" stroke="rgba(22, 200, 255, 0.3)" stroke-width="1"/>
-  <text x="600" y="103" font-family="'Montserrat', sans-serif" font-size="13" font-weight="600" fill="#16C8FF" text-anchor="middle" letter-spacing="3">AI-POWERED CREATIVE AGENCY</text>
+  <rect x="460" y="80" width="280" height="38" rx="19" fill="#F0F6FF" stroke="rgba(0, 68, 255, 0.2)" stroke-width="1"/>
+  <text x="600" y="104" font-family="'Montserrat', sans-serif" font-size="12" font-weight="700" fill="#0044FF" text-anchor="middle" letter-spacing="3">AI-POWERED CREATIVE AGENCY</text>
 
   <!-- Main Headline -->
-  <text x="600" y="270" font-family="'Montserrat', sans-serif" font-size="76" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="6">HOOKSLINK</text>
-  <text x="600" y="340" font-family="'Inter', sans-serif" font-size="28" font-weight="500" fill="#E2E8F0" text-anchor="middle">Connecting What's Next.</text>
+  <text x="600" y="270" font-family="'Montserrat', sans-serif" font-size="76" font-weight="900" fill="#0A0D14" text-anchor="middle" letter-spacing="6">HOOKSLINK</text>
+  <text x="600" y="340" font-family="'Inter', sans-serif" font-size="28" font-weight="600" fill="#0044FF" text-anchor="middle">Connecting What's Next.</text>
 
   <!-- Tagline / Subtitle -->
-  <text x="600" y="420" font-family="'Inter', sans-serif" font-size="20" fill="#94A3B8" text-anchor="middle">
+  <text x="600" y="420" font-family="'Inter', sans-serif" font-size="20" fill="#475569" text-anchor="middle">
     SEO • PPC Advertising • Social Media • Web Design &amp; Development
   </text>
   
@@ -212,7 +232,7 @@ async function run() {
 </svg>`;
 
   await sharp(Buffer.from(ogSvg))
-    .jpeg({ quality: 90 })
+    .jpeg({ quality: 92 })
     .toFile('assets/images/og/og-image.jpg');
 
   console.log('OG image created.');

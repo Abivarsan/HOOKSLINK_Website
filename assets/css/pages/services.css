@@ -1,5 +1,5 @@
 /* ==========================================================================
-   HOOKSLINK - Services Page Styles
+   HOOKSLINK - Services Page Styles (Modern Light Theme)
    ========================================================================== */
 
 @layer pages {
@@ -34,13 +34,14 @@
     font-family: var(--font-heading);
     font-size: var(--fs-xs);
     font-weight: 700;
-    color: var(--color-cyan-blue);
+    color: var(--color-royal-blue);
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }
 
   .stage-block__title {
     font-size: var(--fs-2xl);
+    color: var(--color-text-primary);
   }
 
   .stage-block__desc {

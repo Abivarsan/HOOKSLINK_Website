@@ -1,5 +1,5 @@
 /* ==========================================================================
-   HOOKSLINK - Utilities & Animation Helpers
+   HOOKSLINK - Utilities & Animation Helpers (Modern Light Theme)
    ========================================================================== */
 
 @layer utilities {
@@ -25,7 +25,7 @@
   }
 
   .text-gradient-cyan {
-    background: linear-gradient(135deg, #16c8ff 0%, #ffffff 100%);
+    background: linear-gradient(135deg, var(--color-royal-blue) 0%, var(--color-cyan-blue) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
@@ -37,7 +37,9 @@
 
   .text-muted { color: var(--color-text-muted); }
   .text-secondary { color: var(--color-text-secondary); }
-  .text-white { color: var(--color-white); }
+  .text-white { color: #ffffff; }
+  .text-dark { color: var(--color-text-primary); }
+  .text-royal { color: var(--color-royal-blue); }
   .text-cyan { color: var(--color-cyan-blue); }
 
   /* Width & Alignment helpers */
@@ -75,14 +77,19 @@
 
   /* Glass Surface */
   .glass {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--color-border-subtle);
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-sm);
   }
 
   /* Legal Card Style */
   .legal-card {
+    background: #ffffff;
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
     padding: clamp(1.75rem, 4vw, 3rem);
     line-height: 1.7;
     display: flex;
@@ -93,7 +100,7 @@
   .legal-section-title {
     font-size: var(--fs-xl);
     margin-bottom: 0.75rem;
-    color: #ffffff;
+    color: var(--color-text-primary);
   }
 
   .legal-list {
@@ -132,24 +139,24 @@
     }
   }
 
-  /* Decorative Background Glow Orbs */
+  /* Decorative Ambient Glow Orbs */
   .glow-orb {
     position: absolute;
     border-radius: var(--radius-full);
-    filter: blur(90px);
+    filter: blur(110px);
     pointer-events: none;
     z-index: 0;
-    opacity: 0.45;
+    opacity: 0.16;
   }
 
   .glow-orb--blue {
-    background: #003cff;
+    background: #0044ff;
     width: clamp(280px, 40vw, 550px);
     height: clamp(280px, 40vw, 550px);
   }
 
   .glow-orb--cyan {
-    background: #16c8ff;
+    background: #0099ff;
     width: clamp(220px, 30vw, 420px);
     height: clamp(220px, 30vw, 420px);
   }

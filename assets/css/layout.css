@@ -1,5 +1,5 @@
 /* ==========================================================================
-   HOOKSLINK - Layout Primitives & Responsive Grid System
+   HOOKSLINK - Layout Primitives & Responsive Grid System (Modern Light Theme)
    ========================================================================== */
 
 @layer layout {
@@ -26,6 +26,10 @@
     border-top: 1px solid var(--color-border-subtle);
   }
 
+  .section--alt {
+    background-color: var(--color-surface-base);
+  }
+
   .section--hero {
     padding-top: calc(var(--header-height) + clamp(2.5rem, 5vw, 5rem));
     padding-bottom: clamp(3rem, 6vw, 6rem);
@@ -50,10 +54,10 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.35rem 0.85rem;
-    background: rgba(22, 200, 255, 0.08);
-    border: 1px solid rgba(22, 200, 255, 0.25);
+    background: var(--color-blue-tint);
+    border: 1px solid rgba(0, 68, 255, 0.18);
     border-radius: var(--radius-full);
-    color: var(--color-cyan-blue);
+    color: var(--color-royal-blue);
     font-size: var(--fs-xs);
     font-weight: 600;
     letter-spacing: 0.08em;

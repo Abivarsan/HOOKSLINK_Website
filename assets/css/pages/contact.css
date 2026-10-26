@@ -1,5 +1,5 @@
 /* ==========================================================================
-   HOOKSLINK - Contact Page Styles
+   HOOKSLINK - Contact Page Styles (Modern Light Theme)
    ========================================================================== */
 
 @layer pages {
@@ -22,9 +22,10 @@
   }
 
   .contact-info-card {
-    background: var(--color-surface-card);
+    background: #ffffff;
     border: 1px solid var(--color-border-subtle);
     border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
     padding: clamp(1.75rem, 4vw, 2.5rem);
     display: flex;
     flex-direction: column;
@@ -41,9 +42,9 @@
     width: 46px;
     height: 46px;
     border-radius: var(--radius-md);
-    background: var(--gradient-brand-subtle);
-    border: 1px solid rgba(22, 200, 255, 0.25);
-    color: var(--color-cyan-blue);
+    background: var(--color-blue-tint);
+    border: 1px solid rgba(0, 68, 255, 0.18);
+    color: var(--color-royal-blue);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,18 +63,19 @@
   .contact-method__value {
     font-size: var(--fs-base);
     font-weight: 600;
-    color: var(--color-white);
+    color: var(--color-text-primary);
     transition: color var(--duration-fast);
   }
 
   .contact-method__value:hover {
-    color: var(--color-cyan-blue);
+    color: var(--color-royal-blue);
   }
 
   .contact-form-card {
-    background: var(--color-surface-card);
+    background: #ffffff;
     border: 1px solid var(--color-border-subtle);
     border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
     padding: clamp(2rem, 4vw, 3rem);
   }
 }

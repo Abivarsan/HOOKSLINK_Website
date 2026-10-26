@@ -1,5 +1,5 @@
 /* ==========================================================================
-   HOOKSLINK - Design Tokens & Cascade Layers
+   HOOKSLINK - Design Tokens & Cascade Layers (Modern Light Theme)
    ========================================================================== */
 
 @layer tokens, reset, base, layout, components, pages, utilities;
@@ -25,37 +25,41 @@
   }
 
   :root {
-    /* Brand Colors */
-    --color-black: #000000;
-    --color-white: #ffffff;
-    --color-royal-blue: #003cff;
-    --color-cyan-blue: #16c8ff;
-    --color-royal-blue-rgb: 0, 60, 255;
-    --color-cyan-blue-rgb: 22, 200, 255;
+    /* Brand Color Architecture */
+    --color-black: #0a0d14;            /* Obsidian display black */
+    --color-white: #ffffff;            /* Pure white canvas */
+    --color-royal-blue: #0044ff;       /* Primary action blue (6.8:1 contrast on white) */
+    --color-cyan-blue: #0099ff;        /* Vibrant high-energy accent */
+    --color-royal-blue-rgb: 0, 68, 255;
+    --color-cyan-blue-rgb: 0, 153, 255;
+    --color-blue-tint: #f0f6ff;        /* Soft ice blue fill for badges & containers */
+    --color-blue-tint-hover: #e0edff;  /* Hover state for tinted elements */
+
+    /* Brand Gradients */
     --gradient-brand: linear-gradient(135deg, var(--color-royal-blue) 0%, var(--color-cyan-blue) 100%);
-    --gradient-brand-subtle: linear-gradient(135deg, rgba(0, 60, 255, 0.15) 0%, rgba(22, 200, 255, 0.05) 100%);
-    --gradient-glow: radial-gradient(circle at center, rgba(0, 60, 255, 0.25) 0%, rgba(22, 200, 255, 0.05) 50%, transparent 70%);
+    --gradient-brand-subtle: linear-gradient(135deg, rgba(0, 68, 255, 0.08) 0%, rgba(0, 153, 255, 0.04) 100%);
+    --gradient-glow: radial-gradient(circle at center, rgba(0, 68, 255, 0.12) 0%, rgba(0, 153, 255, 0.03) 50%, transparent 70%);
 
-    /* Surface Hierarchy (Dark-first aesthetic) */
-    --color-bg: #000000;
-    --color-surface-base: #030712;
-    --color-surface-card: #080c18;
-    --color-surface-hover: #0f172a;
-    --color-surface-elevated: #162036;
+    /* Surface Hierarchy (Pure White & Light Slate Modern Palette) */
+    --color-bg: #ffffff;               /* Pure white page background */
+    --color-surface-base: #f8fafc;     /* Clean light slate for alternating sections & footer */
+    --color-surface-card: #ffffff;     /* Pure white cards with soft drop shadows */
+    --color-surface-hover: #f1f5f9;    /* Subtle hover fill */
+    --color-surface-elevated: #ffffff; /* Elevated dialogs / drawers */
 
-    /* Border Colors */
-    --color-border-subtle: rgba(255, 255, 255, 0.07);
-    --color-border-default: rgba(255, 255, 255, 0.12);
-    --color-border-active: rgba(22, 200, 255, 0.4);
+    /* Hairline Borders */
+    --color-border-subtle: rgba(0, 0, 0, 0.06);
+    --color-border-default: rgba(0, 0, 0, 0.10);
+    --color-border-active: rgba(0, 68, 255, 0.35);
 
-    /* Text Colors & Contrast */
-    --color-text-primary: #ffffff;
-    --color-text-secondary: #94a3b8; /* Contrast > 7:1 on black (WCAG AAA) */
-    --color-text-muted: #64748b;     /* Contrast > 4.5:1 on black (WCAG AA) */
-    --color-accent: var(--color-cyan-blue);
-    --color-focus: var(--color-cyan-blue);
-    --color-success: #10b981;
-    --color-error: #ef4444;
+    /* Text Colors & WCAG AAA Contrast */
+    --color-text-primary: #0a0d14;     /* Crisp obsidian black (19:1 contrast on white) */
+    --color-text-secondary: #475569;   /* Balanced slate (7.5:1 contrast on white) */
+    --color-text-muted: #64748b;       /* Accessible metadata (4.8:1 contrast on white) */
+    --color-accent: var(--color-royal-blue);
+    --color-focus: var(--color-royal-blue);
+    --color-success: #059669;
+    --color-error: #dc2626;
 
     /* Typography Families */
     --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -96,12 +100,12 @@
     --radius-xl: 24px;
     --radius-full: 9999px;
 
-    /* Shadow & Glow Effects */
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
-    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
-    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.6);
-    --shadow-brand-glow: 0 0 40px -10px rgba(0, 60, 255, 0.4);
-    --shadow-cyan-glow: 0 0 30px -8px rgba(22, 200, 255, 0.35);
+    /* Modern Soft Shadows & Subtle Auras */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 14px -2px rgba(0, 0, 0, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 16px 36px -6px rgba(0, 0, 0, 0.08), 0 6px 12px -2px rgba(0, 68, 255, 0.04);
+    --shadow-brand-glow: 0 10px 30px -8px rgba(0, 68, 255, 0.35);
+    --shadow-cyan-glow: 0 8px 24px -6px rgba(0, 153, 255, 0.3);
 
     /* Transitions & Motion */
     --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
