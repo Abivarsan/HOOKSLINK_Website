@@ -258,9 +258,33 @@
           </p>
         </header>
 
+
+        <!-- Interactive Service Stage Filter -->
+        <div class="stage-tabs" data-stage-tabs data-reveal>
+          <div class="stage-tabs__list" role="tablist" aria-label="Service delivery stages filter">
+            <div class="stage-tabs__pill" aria-hidden="true"></div>
+            <button type="button" class="stage-tabs__btn is-active" role="tab" aria-selected="true" data-stage="all">
+              <span>All Solutions</span>
+              <span class="stage-tabs__badge">6</span>
+            </button>
+            <button type="button" class="stage-tabs__btn" role="tab" aria-selected="false" data-stage="1">
+              <span>Stage 01: Launch</span>
+              <span class="stage-tabs__badge">2</span>
+            </button>
+            <button type="button" class="stage-tabs__btn" role="tab" aria-selected="false" data-stage="2">
+              <span>Stage 02: Grow</span>
+              <span class="stage-tabs__badge">3</span>
+            </button>
+            <button type="button" class="stage-tabs__btn" role="tab" aria-selected="false" data-stage="3">
+              <span>Stage 03: Scale</span>
+              <span class="stage-tabs__badge">1</span>
+            </button>
+          </div>
+        </div>
+
         <div class="grid grid--3">
           <!-- Service 1: Web Design & Development (Prominent Feature) -->
-          <article class="card card--spotlight service-card" data-spotlight data-reveal>
+          <article class="card card--spotlight service-card" data-stage-target="1" data-spotlight data-reveal>
             <div>
               <span class="service-card__badge">Core Capability</span>
               <div class="service-card__icon-wrapper" aria-hidden="true">
@@ -297,7 +321,7 @@
           </article>
 
           <!-- Service 2: SEO -->
-          <article class="card card--spotlight service-card" data-spotlight data-reveal>
+          <article class="card card--spotlight service-card" data-stage-target="2" data-spotlight data-reveal>
             <div>
               <span class="service-card__badge">Organic Growth</span>
               <div class="service-card__icon-wrapper" aria-hidden="true">
@@ -334,7 +358,7 @@
           </article>
 
           <!-- Service 3: PPC Advertising -->
-          <article class="card card--spotlight service-card" data-spotlight data-reveal>
+          <article class="card card--spotlight service-card" data-stage-target="2" data-spotlight data-reveal>
             <div>
               <span class="service-card__badge">High ROI</span>
               <div class="service-card__icon-wrapper" aria-hidden="true">
@@ -372,7 +396,7 @@
           </article>
 
           <!-- Service 4: Social Media Marketing -->
-          <article class="card card--spotlight service-card" data-spotlight data-reveal>
+          <article class="card card--spotlight service-card" data-stage-target="2" data-spotlight data-reveal>
             <div>
               <span class="service-card__badge">Brand Engagement</span>
               <div class="service-card__icon-wrapper" aria-hidden="true">
@@ -402,7 +426,7 @@
           </article>
 
           <!-- Service 5: Branding & Creative Design -->
-          <article class="card card--spotlight service-card" data-spotlight data-reveal>
+          <article class="card card--spotlight service-card" data-stage-target="1" data-spotlight data-reveal>
             <div>
               <span class="service-card__badge">Visual Identity</span>
               <div class="service-card__icon-wrapper" aria-hidden="true">
@@ -435,7 +459,7 @@
           </article>
 
           <!-- Service 6: AI-Powered Strategies -->
-          <article class="card card--spotlight service-card" data-spotlight data-reveal>
+          <article class="card card--spotlight service-card" data-stage-target="3" data-spotlight data-reveal>
             <div>
               <span class="service-card__badge">Innovation</span>
               <div class="service-card__icon-wrapper" aria-hidden="true">
@@ -477,6 +501,116 @@
         </div>
       </div>
     </section>
+
+    <!-- Interactive AI Growth ROI Calculator Section -->
+    <section class="section section--bordered section--alt" aria-labelledby="roi-section-title">
+      <div class="container">
+        <header class="section-header section-header--center" data-reveal>
+          <span class="section-header__tag">Interactive Growth Simulator</span>
+          <h2 id="roi-section-title" class="section-header__title">
+            Calculate Your <span class="text-gradient">AI Growth ROI.</span>
+          </h2>
+          <p class="section-header__desc">
+            Adjust your monthly marketing investment and primary objective to simulate projected traffic increases, qualified inquiries, and operational hours saved through HOOKSLINK’s AI-accelerated workflows.
+          </p>
+        </header>
+
+        <div class="roi-card" data-roi-widget data-reveal>
+          <div class="roi-card__grid">
+            <!-- Controls Column -->
+            <div class="roi-card__controls">
+              <div class="roi-control-group">
+                <div class="roi-control-group__header">
+                  <label for="home-roi-slider" class="roi-control-group__label">Estimated Monthly Ad / Marketing Spend</label>
+                  <span class="roi-control-group__val" data-roi-budget>£3,500</span>
+                </div>
+                <input type="range" 
+                       id="home-roi-slider" 
+                       class="roi-range-slider" 
+                       min="1000" 
+                       max="20000" 
+                       step="500" 
+                       value="3500" 
+                       data-roi-slider 
+                       aria-label="Monthly marketing investment in British Pounds">
+                <div class="roi-range-ticks" aria-hidden="true">
+                  <span>£1,000</span>
+                  <span>£10,000</span>
+                  <span>£20,000+</span>
+                </div>
+              </div>
+
+              <div class="roi-goal-selector">
+                <span class="roi-control-group__label">Primary Campaign Objective</span>
+                <div class="roi-goal-buttons" role="group" aria-label="Campaign Goal Selection">
+                  <button type="button" class="roi-goal-btn is-active" data-roi-goal="growth" aria-pressed="true">
+                    <strong>Balanced Growth</strong>
+                    <span>Omnichannel ROI</span>
+                  </button>
+                  <button type="button" class="roi-goal-btn" data-roi-goal="traffic" aria-pressed="false">
+                    <strong>Traffic Surge</strong>
+                    <span>Audience Reach</span>
+                  </button>
+                  <button type="button" class="roi-goal-btn" data-roi-goal="leads" aria-pressed="false">
+                    <strong>High-Intent Leads</strong>
+                    <span>Conversion Focus</span>
+                  </button>
+                </div>
+              </div>
+
+              <p class="text-secondary text-sm">
+                Projections are modeled from verified UK performance benchmarks across B2B services, retail eCommerce, and commercial logistics client campaigns.
+              </p>
+            </div>
+
+            <!-- Results Board -->
+            <div class="roi-dashboard">
+              <div>
+                <div class="roi-dashboard__header">
+                  <div>
+                    <span class="roi-dashboard__badge">AI Predictive Model</span>
+                    <p class="text-white text-sm font-semibold mt-1">Projected Monthly Performance</p>
+                  </div>
+                </div>
+
+                <div class="roi-metrics-grid">
+                  <div class="roi-metric-item">
+                    <span class="roi-metric-item__val" data-roi-traffic>+20,300</span>
+                    <span class="roi-metric-item__label">Est. Monthly Visitors</span>
+                  </div>
+                  <div class="roi-metric-item">
+                    <span class="roi-metric-item__val" data-roi-leads>+147</span>
+                    <span class="roi-metric-item__label">Projected Qualified Leads</span>
+                  </div>
+                  <div class="roi-metric-item">
+                    <span class="roi-metric-item__val" data-roi-multiple>3.8x</span>
+                    <span class="roi-metric-item__label">Estimated ROI Multiple</span>
+                  </div>
+                  <div class="roi-metric-item">
+                    <span class="roi-metric-item__val" data-roi-hours>+52 hrs</span>
+                    <span class="roi-metric-item__label">Monthly Time Saved</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="roi-dashboard__cta">
+                <a href="/contact-us/" class="btn btn--primary btn--full">
+                  <span>Claim Your Custom Growth Plan</span>
+                  <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+                <p class="roi-dashboard__disclaimer">
+                  Individual results vary based on industry and market competition. Request a bespoke audit for precise forecasting.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <!-- Featured Projects Showcase Section -->
     <section class="section section--bordered section--alt" aria-labelledby="projects-title">

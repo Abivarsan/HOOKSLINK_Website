@@ -110,8 +110,36 @@
       </div>
     </section>
 
+
+    <!-- Interactive Service Stage Switcher -->
+    <section class="section pb-0" aria-label="Filter Services by Delivery Stage">
+      <div class="container" data-reveal>
+        <div class="stage-tabs" data-stage-tabs>
+          <div class="stage-tabs__list" role="tablist" aria-label="Filter services by stage">
+            <div class="stage-tabs__pill" aria-hidden="true"></div>
+            <button type="button" class="stage-tabs__btn is-active" role="tab" aria-selected="true" data-stage="all">
+              <span>All Delivery Stages</span>
+              <span class="stage-tabs__badge">9 Services</span>
+            </button>
+            <button type="button" class="stage-tabs__btn" role="tab" aria-selected="false" data-stage="1">
+              <span>Stage 01: Build &amp; Design</span>
+              <span class="stage-tabs__badge">3</span>
+            </button>
+            <button type="button" class="stage-tabs__btn" role="tab" aria-selected="false" data-stage="2">
+              <span>Stage 02: Grow &amp; Optimize</span>
+              <span class="stage-tabs__badge">3</span>
+            </button>
+            <button type="button" class="stage-tabs__btn" role="tab" aria-selected="false" data-stage="3">
+              <span>Stage 03: Engage &amp; Automate</span>
+              <span class="stage-tabs__badge">3</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Stage 1: Build & Design -->
-    <section class="section section--bordered stage-block" aria-labelledby="stage-1-title">
+    <section class="section section--bordered stage-block" data-stage-target="1" aria-labelledby="stage-1-title">
       <div class="container">
         <div class="stage-block__header" data-reveal>
           <div>
@@ -225,7 +253,7 @@
     </section>
 
     <!-- Stage 2: Grow & Optimize -->
-    <section class="section section--bordered section--alt stage-block" aria-labelledby="stage-2-title">
+    <section class="section section--bordered section--alt stage-block" data-stage-target="2" aria-labelledby="stage-2-title">
       <div class="container">
         <div class="stage-block__header" data-reveal>
           <div>
@@ -335,7 +363,7 @@
     </section>
 
     <!-- Stage 3: Engage & Automate -->
-    <section class="section section--bordered stage-block" aria-labelledby="stage-3-title">
+    <section class="section section--bordered stage-block" data-stage-target="3" aria-labelledby="stage-3-title">
       <div class="container">
         <div class="stage-block__header" data-reveal>
           <div>
@@ -441,6 +469,216 @@
               </li>
             </ul>
           </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Interactive AI Growth ROI Calculator -->
+    <section class="section section--bordered section--alt" aria-labelledby="services-roi-title">
+      <div class="container">
+        <header class="section-header section-header--center" data-reveal>
+          <span class="section-header__tag">Simulate Impact</span>
+          <h2 id="services-roi-title" class="section-header__title">
+            Interactive AI Growth <span class="text-gradient">ROI Calculator.</span>
+          </h2>
+          <p class="section-header__desc">
+            Explore how our integrated multi-channel marketing and AI optimization scale your monthly visitor acquisition and lead pipeline.
+          </p>
+        </header>
+
+        <div class="roi-card" data-roi-widget data-reveal>
+          <div class="roi-card__grid">
+            <div class="roi-card__controls">
+              <div class="roi-control-group">
+                <div class="roi-control-group__header">
+                  <label for="services-roi-slider" class="roi-control-group__label">Estimated Monthly Ad / Marketing Spend</label>
+                  <span class="roi-control-group__val" data-roi-budget>£3,500</span>
+                </div>
+                <input type="range" 
+                       id="services-roi-slider" 
+                       class="roi-range-slider" 
+                       min="1000" 
+                       max="20000" 
+                       step="500" 
+                       value="3500" 
+                       data-roi-slider 
+                       aria-label="Monthly marketing investment in British Pounds">
+                <div class="roi-range-ticks" aria-hidden="true">
+                  <span>£1,000</span>
+                  <span>£10,000</span>
+                  <span>£20,000+</span>
+                </div>
+              </div>
+
+              <div class="roi-goal-selector">
+                <span class="roi-control-group__label">Primary Campaign Objective</span>
+                <div class="roi-goal-buttons" role="group" aria-label="Campaign Goal Selection">
+                  <button type="button" class="roi-goal-btn is-active" data-roi-goal="growth" aria-pressed="true">
+                    <strong>Balanced Growth</strong>
+                    <span>Omnichannel ROI</span>
+                  </button>
+                  <button type="button" class="roi-goal-btn" data-roi-goal="traffic" aria-pressed="false">
+                    <strong>Traffic Surge</strong>
+                    <span>Audience Reach</span>
+                  </button>
+                  <button type="button" class="roi-goal-btn" data-roi-goal="leads" aria-pressed="false">
+                    <strong>High-Intent Leads</strong>
+                    <span>Conversion Focus</span>
+                  </button>
+                </div>
+              </div>
+
+              <p class="text-secondary text-sm">
+                Projections are modeled from verified UK performance benchmarks across B2B services, retail eCommerce, and commercial logistics client campaigns.
+              </p>
+            </div>
+
+            <div class="roi-dashboard">
+              <div>
+                <div class="roi-dashboard__header">
+                  <div>
+                    <span class="roi-dashboard__badge">AI Predictive Model</span>
+                    <p class="text-white text-sm font-semibold mt-1">Projected Monthly Performance</p>
+                  </div>
+                </div>
+
+                <div class="roi-metrics-grid">
+                  <div class="roi-metric-item">
+                    <span class="roi-metric-item__val" data-roi-traffic>+20,300</span>
+                    <span class="roi-metric-item__label">Est. Monthly Visitors</span>
+                  </div>
+                  <div class="roi-metric-item">
+                    <span class="roi-metric-item__val" data-roi-leads>+147</span>
+                    <span class="roi-metric-item__label">Projected Qualified Leads</span>
+                  </div>
+                  <div class="roi-metric-item">
+                    <span class="roi-metric-item__val" data-roi-multiple>3.8x</span>
+                    <span class="roi-metric-item__label">Estimated ROI Multiple</span>
+                  </div>
+                  <div class="roi-metric-item">
+                    <span class="roi-metric-item__val" data-roi-hours>+52 hrs</span>
+                    <span class="roi-metric-item__label">Monthly Time Saved</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="roi-dashboard__cta">
+                <a href="/contact-us/" class="btn btn--primary btn--full">
+                  <span>Claim Your Custom Growth Plan</span>
+                  <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+                <p class="roi-dashboard__disclaimer">
+                  Individual results vary based on industry and market competition. Request a bespoke audit for precise forecasting.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enterprise FAQ Accordion Section -->
+    <section class="section" aria-labelledby="faq-title">
+      <div class="container">
+        <header class="section-header section-header--center" data-reveal>
+          <span class="section-header__tag">Got Questions?</span>
+          <h2 id="faq-title" class="section-header__title">
+            Frequently Asked <span class="text-gradient">Questions.</span>
+          </h2>
+          <p class="section-header__desc">
+            Everything you need to know about partnering with HOOKSLINK, our delivery framework, and how our AI-driven systems operate.
+          </p>
+        </header>
+
+        <div class="faq-accordion" data-faq-accordion data-single-expand data-reveal>
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button type="button" class="faq-item__trigger" aria-expanded="false">
+              <span>How does HOOKSLINK combine AI technology with creative marketing?</span>
+              <span class="faq-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-item__content">
+              <div class="faq-item__inner">
+                We use proprietary AI models for deep keyword clustering, real-time ad bid optimization, and predictive audience targeting. Simultaneously, our UK-based creative directors and engineers hand-craft your brand messaging, custom responsive UI, and clean semantic code. AI accelerates data insights, while our human strategists craft conversion psychology.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button type="button" class="faq-item__trigger" aria-expanded="false">
+              <span>How quickly will we see measurable results from our campaigns?</span>
+              <span class="faq-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-item__content">
+              <div class="faq-item__inner">
+                Paid advertising campaigns across Google Ads, Meta, and TikTok begin driving qualified clicks and inquiries within 48 to 72 hours of launch. Organic search engine optimization (SEO) builds authority over 60 to 90 days as search algorithms index technical upgrades and content pillars.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button type="button" class="faq-item__trigger" aria-expanded="false">
+              <span>What makes your web development superior to WordPress templates?</span>
+              <span class="faq-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-item__content">
+              <div class="faq-item__inner">
+                We craft custom, hand-coded websites using semantic HTML5, modern CSS3 with cascade layers, and vanilla ES modules without heavy page builders or bloated third-party plugins. This guarantees sub-second load times, 100/100 Core Web Vitals, enterprise accessibility, and clean search indexing.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button type="button" class="faq-item__trigger" aria-expanded="false">
+              <span>Are there long-term locked-in agency contracts?</span>
+              <span class="faq-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-item__content">
+              <div class="faq-item__inner">
+                No. We earn your partnership through measurable performance. Our projects follow milestone-based delivery stages, and ongoing growth retainers operate with transparent monthly reporting without predatory multi-year lock-in clauses.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button type="button" class="faq-item__trigger" aria-expanded="false">
+              <span>Where is HOOKSLINK based and officially registered?</span>
+              <span class="faq-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-item__content">
+              <div class="faq-item__inner">
+                HOOKSLINK is officially registered in England and Wales under Company Registration Number 15993172. Our UK office is located at 1-2 Wensley Terrace, Ferryhill, County Durham, DL17 0DA, United Kingdom.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
