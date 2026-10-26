@@ -1,0 +1,79 @@
+/* ==========================================================================
+   HOOKSLINK - Contact Page Styles
+   ========================================================================== */
+
+@layer pages {
+  .contact-hero {
+    padding-top: calc(var(--header-height) + clamp(2.5rem, 5vw, 4.5rem));
+    padding-bottom: clamp(2rem, 4vw, 3.5rem);
+    text-align: center;
+  }
+
+  .contact-layout {
+    display: grid;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: flex-start;
+  }
+
+  @media (min-width: 64rem) {
+    .contact-layout {
+      grid-template-columns: 1fr 1.35fr;
+    }
+  }
+
+  .contact-info-card {
+    background: var(--color-surface-card);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-xl);
+    padding: clamp(1.75rem, 4vw, 2.5rem);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contact-method {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .contact-method__icon-box {
+    width: 46px;
+    height: 46px;
+    border-radius: var(--radius-md);
+    background: var(--gradient-brand-subtle);
+    border: 1px solid rgba(22, 200, 255, 0.25);
+    color: var(--color-cyan-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .contact-method__label {
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    margin-bottom: 0.25rem;
+  }
+
+  .contact-method__value {
+    font-size: var(--fs-base);
+    font-weight: 600;
+    color: var(--color-white);
+    transition: color var(--duration-fast);
+  }
+
+  .contact-method__value:hover {
+    color: var(--color-cyan-blue);
+  }
+
+  .contact-form-card {
+    background: var(--color-surface-card);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-xl);
+    padding: clamp(2rem, 4vw, 3rem);
+  }
+}

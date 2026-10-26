@@ -1,0 +1,10 @@
+{
+  "extends": ["html-validate:recommended"],
+  "rules": {
+    "doctype-style": "error",
+    "no-inline-style": "error",
+    "tel-non-breaking": "off",
+    "require-sri": "off",
+    "long-title": ["error", { "maxlength": 75 }]
+  }
+}

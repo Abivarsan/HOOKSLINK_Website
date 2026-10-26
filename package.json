@@ -1,0 +1,26 @@
+{
+  "name": "hookslink-website",
+  "version": "1.0.0",
+  "description": "Production-ready website for HOOKSLINK - UK AI-Powered Creative Digital Marketing Agency",
+  "scripts": {
+    "serve": "npx serve .",
+    "validate:html": "html-validate \"**/*.html\"",
+    "process:assets": "node scripts/process-assets.js"
+  },
+  "keywords": [
+    "hookslink",
+    "digital-marketing",
+    "seo",
+    "ppc",
+    "web-development"
+  ],
+  "author": "HOOKSLINK",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "html-validate": "^9.0.0",
+    "sharp": "^0.34.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

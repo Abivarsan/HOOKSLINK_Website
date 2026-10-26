@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 - Page Not Found | HOOKSLINK</title>
+  <meta name="robots" content="noindex, follow">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="/assets/icons/favicon-32x32.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#003CFF">
+
+  <!-- Fonts & Stylesheets -->
+  <link rel="preload" href="/assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/montserrat-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/utilities.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-header" data-header>
+    <div class="container site-header__container">
+      <a href="/" class="site-header__logo-link" aria-label="HOOKSLINK Homepage">
+        <img src="/assets/images/brand/hookslink-logo-transparent.webp" 
+             alt="HOOKSLINK Logo" 
+             class="site-header__logo-img" 
+             width="180" 
+             height="48">
+      </a>
+      <a href="/" class="btn btn--secondary">Back to Safety</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section section--hero text-center" aria-labelledby="not-found-title">
+      <div class="glow-orb glow-orb--blue glow-orb--404-blue" aria-hidden="true"></div>
+      <div class="container container--narrow">
+        <span class="section-header__tag">Error 404</span>
+        <h1 id="not-found-title" class="section-header__title mb-4 not-found-heading">
+          <span class="text-gradient">Lost Link.</span>
+        </h1>
+        <p class="section-header__desc mx-auto max-w-narrow mb-10">
+          The page or resource you are looking for has been moved, removed, or never existed in this dimension.
+        </p>
+
+        <div class="cluster cluster--center">
+          <a href="/" class="btn btn--primary btn--lg">Return to Homepage</a>
+          <a href="/services/" class="btn btn--secondary btn--lg">Explore Services</a>
+          <a href="/contact-us/" class="btn btn--secondary btn--lg">Contact Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container text-center">
+      <p class="text-muted">
+        &copy; <span data-current-year>2026</span> HOOKSLINK. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

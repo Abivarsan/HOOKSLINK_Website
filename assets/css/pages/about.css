@@ -1,0 +1,82 @@
+/* ==========================================================================
+   HOOKSLINK - About Page Styles
+   ========================================================================== */
+
+@layer pages {
+  .about-hero {
+    padding-top: calc(var(--header-height) + clamp(2.5rem, 5vw, 4.5rem));
+    padding-bottom: clamp(3rem, 6vw, 5rem);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-story {
+    display: grid;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+  }
+
+  @media (min-width: 64rem) {
+    .about-story {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .about-story__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .about-story__quote {
+    font-size: var(--fs-lg);
+    font-weight: 500;
+    color: var(--color-white);
+    line-height: 1.5;
+    border-left: 3px solid var(--color-cyan-blue);
+    padding-left: 1.25rem;
+    margin-block: 1rem;
+  }
+
+  .about-badge-card {
+    background: var(--color-surface-card);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-xl);
+    padding: clamp(2rem, 4vw, 3rem);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-badge-card::after {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(0, 60, 255, 0.25) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .mission-card {
+    background: radial-gradient(circle at top right, rgba(0, 60, 255, 0.15), rgba(8, 12, 24, 0.95) 60%);
+    border: 1px solid var(--color-border-active);
+    border-radius: var(--radius-xl);
+    padding: clamp(2rem, 4vw, 3.5rem);
+    text-align: center;
+  }
+
+  .mission-card__title {
+    font-size: var(--fs-2xl);
+    margin-bottom: 1rem;
+  }
+
+  .mission-card__text {
+    font-size: var(--fs-lg);
+    color: var(--color-text-primary);
+    max-width: 44rem;
+    margin-inline: auto;
+    line-height: 1.6;
+  }
+}

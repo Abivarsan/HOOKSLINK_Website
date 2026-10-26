@@ -1,0 +1,143 @@
+/* ==========================================================================
+   HOOKSLINK - Layout Primitives & Responsive Grid System
+   ========================================================================== */
+
+@layer layout {
+  /* Container Primitives */
+  .container {
+    width: 100%;
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-inline: clamp(1rem, 4vw, 2rem);
+  }
+
+  .container--narrow {
+    max-width: var(--container-narrow);
+  }
+
+  /* Section Wrapper */
+  .section {
+    position: relative;
+    padding-block: var(--section-padding-y);
+    width: 100%;
+  }
+
+  .section--bordered {
+    border-top: 1px solid var(--color-border-subtle);
+  }
+
+  .section--hero {
+    padding-top: calc(var(--header-height) + clamp(2.5rem, 5vw, 5rem));
+    padding-bottom: clamp(3rem, 6vw, 6rem);
+    min-height: calc(100vh - var(--header-height));
+    display: flex;
+    align-items: center;
+  }
+
+  /* Section Header / Lead Block */
+  .section-header {
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  .section-header--center {
+    text-align: center;
+    max-width: 44rem;
+    margin-inline: auto;
+  }
+
+  .section-header__tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.85rem;
+    background: rgba(22, 200, 255, 0.08);
+    border: 1px solid rgba(22, 200, 255, 0.25);
+    border-radius: var(--radius-full);
+    color: var(--color-cyan-blue);
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-4);
+  }
+
+  .section-header__title {
+    font-size: var(--fs-3xl);
+    margin-bottom: var(--space-4);
+  }
+
+  .section-header__desc {
+    font-size: var(--fs-md);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+  }
+
+  /* Grid Layouts */
+  .grid {
+    display: grid;
+    gap: clamp(1rem, 2.5vw, 1.75rem);
+  }
+
+  /* 2-Column Responsive Grid */
+  @media (min-width: 48rem) { /* 768px */
+    .grid--2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* 3-Column Responsive Grid */
+  @media (min-width: 48rem) { /* 768px */
+    .grid--3 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 64rem) { /* 1024px */
+    .grid--3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* 4-Column Responsive Grid */
+  @media (min-width: 30rem) { /* 480px */
+    .grid--4 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 64rem) { /* 1024px */
+    .grid--4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  /* Bento Grid Pattern (Linear/Vercel Aesthetic) */
+  .bento-grid {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  @media (min-width: 48rem) {
+    .bento-grid {
+      grid-template-columns: repeat(6, 1fr);
+    }
+    .bento-col-2 { grid-column: span 3; }
+    .bento-col-3 { grid-column: span 2; }
+    .bento-col-4 { grid-column: span 4; }
+    .bento-col-6 { grid-column: span 6; }
+  }
+
+  /* Flexbox Utilities */
+  .stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .cluster {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-4);
+  }
+}

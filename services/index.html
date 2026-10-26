@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services | HOOKSLINK - UK Digital Marketing, SEO &amp; Web Development</title>
+  <meta name="description" content="Explore Hookslink's full stack of digital services in the UK: Web Design &amp; Development, SEO, PPC Advertising, Social Media Marketing, AI Strategies, and Branding.">
+  <link rel="canonical" href="https://hookslink.com/services/">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="/assets/icons/favicon-32x32.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#003CFF">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="HOOKSLINK">
+  <meta property="og:title" content="Services | HOOKSLINK UK Digital Agency">
+  <meta property="og:description" content="Full-stack digital growth services across Web Engineering, SEO, Paid Ads, Social, and AI Automation.">
+  <meta property="og:url" content="https://hookslink.com/services/">
+  <meta property="og:image" content="https://hookslink.com/assets/images/og/og-image.jpg">
+
+  <!-- Fonts & Stylesheets -->
+  <link rel="preload" href="/assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/montserrat-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/utilities.css">
+  <link rel="stylesheet" href="/assets/css/pages/services.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Global Header -->
+  <header class="site-header" data-header>
+    <div class="container site-header__container">
+      <a href="/" class="site-header__logo-link" aria-label="HOOKSLINK Homepage">
+        <img src="/assets/images/brand/hookslink-logo-transparent.webp" 
+             alt="HOOKSLINK Logo" 
+             class="site-header__logo-img" 
+             width="180" 
+             height="48"
+             fetchpriority="high">
+      </a>
+
+      <nav class="nav" aria-label="Primary Navigation">
+        <ul class="nav__list">
+          <li><a href="/" class="nav__link">Home</a></li>
+          <li><a href="/about-us/" class="nav__link">About Us</a></li>
+          <li><a href="/services/" class="nav__link is-active" aria-current="page">Services</a></li>
+          <li><a href="/contact-us/" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__actions">
+        <a href="/contact-us/" class="btn btn--primary">
+          <span>Get Free Consultation</span>
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <button type="button" 
+              class="menu-toggle" 
+              data-menu-toggle 
+              aria-label="Toggle navigation menu" 
+              aria-expanded="false" 
+              aria-controls="mobile-nav-drawer">
+        <span class="menu-toggle__line"></span>
+        <span class="menu-toggle__line"></span>
+        <span class="menu-toggle__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-nav-drawer" class="mobile-drawer" data-mobile-drawer>
+    <nav class="mobile-drawer__nav" aria-label="Mobile Navigation">
+      <ul class="mobile-drawer__list">
+        <li><a href="/" class="mobile-drawer__link">Home</a></li>
+        <li><a href="/about-us/" class="mobile-drawer__link">About Us</a></li>
+        <li><a href="/services/" class="mobile-drawer__link is-active" aria-current="page">Services</a></li>
+        <li><a href="/contact-us/" class="mobile-drawer__link">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-drawer__footer">
+      <a href="/contact-us/" class="btn btn--primary btn--full">Book Free Consultation</a>
+      <a href="tel:07871780500" class="btn btn--secondary btn--full">Call: 07871 780500</a>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- Services Hero -->
+    <section class="services-hero" aria-labelledby="services-hero-title">
+      <div class="glow-orb glow-orb--cyan glow-orb--services-cyan" aria-hidden="true"></div>
+      <div class="container" data-reveal>
+        <span class="section-header__tag">Specialized Capabilities</span>
+        <h1 id="services-hero-title" class="section-header__title mb-6">
+          A Full Stack of <span class="text-gradient">Digital Services.</span>
+        </h1>
+        <p class="section-header__desc mx-auto max-w-prose">
+          At Hookslink Digital Agency, we help businesses in the UK and beyond unlock their full online potential through 9 specialized capabilities organized across our 3-stage delivery framework.
+        </p>
+      </div>
+    </section>
+
+    <!-- Stage 1: Build & Design -->
+    <section class="section section--bordered stage-block" aria-labelledby="stage-1-title">
+      <div class="container">
+        <div class="stage-block__header" data-reveal>
+          <div>
+            <span class="stage-block__number">Stage 01</span>
+            <h2 id="stage-1-title" class="stage-block__title">Build &amp; <span class="text-gradient">Design</span></h2>
+          </div>
+          <p class="stage-block__desc">
+            We start by shaping your brand’s foundation with distinctive creative visual identity, compelling content, and modern web experiences.
+          </p>
+        </div>
+
+        <div class="grid grid--3">
+          <!-- Service: Web Design & Development -->
+          <article id="web-dev" class="card card--spotlight service-card" data-spotlight data-reveal>
+            <div>
+              <span class="service-card__badge">Flagship Capability</span>
+              <div class="service-card__icon-wrapper" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3 class="service-card__title">Web Design &amp; Development</h3>
+              <p class="service-card__desc">
+                Your website is your premier digital storefront. We build modern, mobile-friendly websites that are ultra-fast, secure, and structurally optimized for SEO and conversion rate optimization.
+              </p>
+            </div>
+            <ul class="service-card__features">
+              <li class="service-card__feature-item">
+                <svg class="service-card__feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Semantic HTML5 &amp; Modern Modular CSS</span>
+              </li>
+              <li class="service-card__feature-item">
+                <svg class="service-card__feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>100/100 Core Web Vitals Performance</span>
+              </li>
+              <li class="service-card__feature-item">
+                <svg class="service-card__feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Mobile, Tablet &amp; Desktop Tested</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Service: Branding & Creative Design -->
+          <article id="branding" class="card card--spotlight service-card" data-spotlight data-reveal>
+            <div>
+              <span class="service-card__badge">Visual Identity</span>
+              <div class="service-card__icon-wrapper" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                  <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                  <path d="M2 2l7.586 7.586"></path>
+                </svg>
+              </div>
+              <h3 class="service-card__title">Branding &amp; Creative Design</h3>
+              <p class="service-card__desc">
+                From logo suites to comprehensive brand guidelines, we design visual assets that leave an enduring impression, communicate trust, and elevate your enterprise above competitors.
+              </p>
+            </div>
+            <ul class="service-card__features">
+              <li class="service-card__feature-item">
+                <svg class="service-card__feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Logo Systems &amp; Brand Color Palettes</span>
+              </li>
+              <li class="service-card__feature-item">
+                <svg class="service-card__feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Social Media Kits &amp; Marketing Templates</span>
+              </li>
+              <li class="service-card__feature-item">
+                <svg class="service-card__feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Vector Typography &amp; Iconography</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Service: Content Marketing & Copywriting -->
+          <article id="content" class="card card--spotlight service-card" data-spotlight data-reveal>
+            <div>
+              <span class="service-card__badge">Storytelling</span>
+              <div class="service-card__icon-wrapper" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+              </div>
+              <h3 class="service-card__title">Content &amp; Copywriting</h3>
+              <p class="service-card__desc">
+                High-converting copy designed to inform, persuade, and rank. We write SEO-optimized landing pages, ad copy, blogs, and marketing assets that motivate visitors to take immediate action.
+              </p>
+            </div>
+            <ul class="service-card__features">
+              <li class="service-card__feature-item">
+                <svg class="service-card__feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Conversion-Focused Sales Copy</span>
+              </li>
+              <li class="service-card__feature-item">
+                <svg class="service-card__feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>SEO Pillar Articles &amp; Editorial Content</span>
+              </li>
+              <li class="service-card__feature-item">
+                <svg class="service-card__feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Audience Persona &amp; Tone Formulation</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stage 2: Grow & Optimize -->
+    <section class="section section--bordered stage-block" aria-labelledby="stage-2-title">
+      <div class="container">
+        <div class="stage-block__header" data-reveal>
+          <div>
+            <span class="stage-block__number">Stage 02</span>
+            <h2 id="stage-2-title" class="stage-block__title">Grow &amp; <span class="text-gradient">Optimize</span></h2>
+          </div>
+          <p class="stage-block__desc">
+            Next, we help your business gain commanding visibility and attract qualified leads through proven organic search and paid growth channels.
+          </p>
+        </div>
+
+        <div class="grid grid--3">
+          <!-- Service: SEO -->
+          <article id="seo" class="card card--spotlight service-card" data-spotlight data-reveal>
+            <div>
+              <span class="service-card__badge">Search Authority</span>
+              <div class="service-card__icon-wrapper" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </div>
+              <h3 class="service-card__title">Search Engine Optimization</h3>
+              <p class="service-card__desc">
+                Climb Google rankings and lock in qualified organic traffic. We engineer technical site health, on-page keyword schemas, and authority signals so you outrank competitors sustainably.
+              </p>
+            </div>
+            <ul class="service-card__features">
+              <li class="service-card__feature-item">
+                <svg class="service-card__feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Technical Schema &amp; Site Architecture</span>
+              </li>
+              <li class="service-card__feature-item">
+                <svg class="service-card__feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Local UK Google Business Profiles</span>
+              </li>
+              <li class="service-card__feature-item">
+                <svg class="service-card__feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Keyword Gap &amp; SERP Tracking</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Service: PPC Advertising -->
+          <article id="ppc" class="card card--spotlight service-card" data-spotlight data-reveal>
+            <div>
+              <span class="service-card__badge">High ROAS</span>
+              <div class="service-card__icon-wrapper" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <h3 class="service-card__title">Pay-Per-Click Advertising</h3>
+              <p class="service-card__desc">
+                Deploy high-converting ad budgets across Google Search, Google Display, Facebook Ads, Instagram Ads, and TikTok. Continuous bidding optimization guarantees minimal ad spend wastage.
+              </p>
+            </div>
+            <ul class="service-card__features">
+              <li class="service-card__feature-item">
+                <svg class="service-card__feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Google Search &amp; Performance Max</span>
+              </li>
+              <li class="service-card__feature-item">
+                <svg class="service-card__feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Meta Ads (FB/IG) High-Intent Funnels</span>
+              </li>
+              <li class="service-card__feature-item">
+                <svg class="service-card__feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>TikTok Targeted Video Ad Campaigns</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Service: Social Media Marketing -->
+          <article id="social" class="card card--spotlight service-card" data-spotlight data-reveal>
+            <div>
+              <span class="service-card__badge">Engagement</span>
+              <div class="service-card__icon-wrapper" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </div>
+              <h3 class="service-card__title">Social Media Marketing</h3>
+              <p class="service-card__desc">
+                Build brand awareness and foster a thriving digital following. We develop platform-tailored creative calendars and dynamic campaigns across TikTok, Instagram, Facebook, and LinkedIn.
+              </p>
+            </div>
+            <ul class="service-card__features">
+              <li class="service-card__feature-item">
+                <svg class="service-card__feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Short-Form Video Production &amp; Reels</span>
+              </li>
+              <li class="service-card__feature-item">
+                <svg class="service-card__feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Brand Consistency &amp; Follower Growth</span>
+              </li>
+              <li class="service-card__feature-item">
+                <svg class="service-card__feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Direct Lead Influx Management</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stage 3: Engage & Automate -->
+    <section class="section section--bordered stage-block" aria-labelledby="stage-3-title">
+      <div class="container">
+        <div class="stage-block__header" data-reveal>
+          <div>
+            <span class="stage-block__number">Stage 03</span>
+            <h2 id="stage-3-title" class="stage-block__title">Engage &amp; <span class="text-gradient">Automate</span></h2>
+          </div>
+          <p class="stage-block__desc">
+            Finally, we focus on retaining customers and scaling long-term commercial returns with smart lifecycle automation, predictive AI, and rigorous analytics.
+          </p>
+        </div>
+
+        <div class="grid grid--3">
+          <!-- Service: Email Marketing & Automation -->
+          <article id="email" class="card card--spotlight service-card" data-spotlight data-reveal>
+            <div>
+              <span class="service-card__badge">Lifecycle Marketing</span>
+              <div class="service-card__icon-wrapper" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <h3 class="service-card__title">Email Marketing &amp; Automation</h3>
+              <p class="service-card__desc">
+                Nurture leads into loyal recurring customers. We craft personalized automated drip funnels, newsletter campaigns, and retention workflows that drive continuous conversions on autopilot.
+              </p>
+            </div>
+            <ul class="service-card__features">
+              <li class="service-card__feature-item">
+                <svg class="service-card__feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Automated Welcome &amp; Re-engagement Drips</span>
+              </li>
+              <li class="service-card__feature-item">
+                <svg class="service-card__feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Audience Segmentation &amp; A/B Testing</span>
+              </li>
+              <li class="service-card__feature-item">
+                <svg class="service-card__feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>CRM &amp; Lead Management Integration</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Service: AI-Powered Marketing Strategies -->
+          <article id="ai" class="card card--spotlight service-card" data-spotlight data-reveal>
+            <div>
+              <span class="service-card__badge">Predictive AI</span>
+              <div class="service-card__icon-wrapper" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </svg>
+              </div>
+              <h3 class="service-card__title">AI-Powered Marketing</h3>
+              <p class="service-card__desc">
+                Stay at the cutting edge of digital commerce. We utilize machine learning algorithms to model consumer behavior, optimize bids in real time, and scale automated campaigns with minimal human friction.
+              </p>
+            </div>
+            <ul class="service-card__features">
+              <li class="service-card__feature-item">
+                <svg class="service-card__feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Predictive Consumer Intent Modeling</span>
+              </li>
+              <li class="service-card__feature-item">
+                <svg class="service-card__feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Automated Algorithmic Bid Management</span>
+              </li>
+              <li class="service-card__feature-item">
+                <svg class="service-card__feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Intelligent Conversion Optimizations</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Service: Performance Analytics & Reporting -->
+          <article id="analytics" class="card card--spotlight service-card" data-spotlight data-reveal>
+            <div>
+              <span class="service-card__badge">Transparency</span>
+              <div class="service-card__icon-wrapper" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+              </div>
+              <h3 class="service-card__title">Performance Analytics</h3>
+              <p class="service-card__desc">
+                Clear insights without vanity smoke and mirrors. We build custom monthly reporting dashboards and attribution models so you know precisely which channels produce the highest profit.
+              </p>
+            </div>
+            <ul class="service-card__features">
+              <li class="service-card__feature-item">
+                <svg class="service-card__feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Transparent Monthly Executive Dashboards</span>
+              </li>
+              <li class="service-card__feature-item">
+                <svg class="service-card__feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Multi-Touch Attribution Modeling</span>
+              </li>
+              <li class="service-card__feature-item">
+                <svg class="service-card__feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>ROI &amp; Customer Acquisition Cost Analysis</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Consultation CTA -->
+    <section class="section" aria-labelledby="services-cta-title">
+      <div class="container">
+        <div class="cta-band" data-reveal>
+          <h2 id="services-cta-title" class="cta-band__title">
+            Interested to <span class="text-gradient">Collaborate?</span>
+          </h2>
+          <p class="cta-band__desc">
+            Whether you’re looking to boost search rankings, build a modern website, or launch high-converting paid ad campaigns, our team is ready to help you grow.
+          </p>
+          <div class="cta-band__actions">
+            <a href="/contact-us/" class="btn btn--primary btn--lg">
+              <span>Start Your Free Consultation</span>
+              <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="tel:07871780500" class="btn btn--secondary btn--lg">Call: 07871 780500</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <a href="/" aria-label="HOOKSLINK Home">
+            <img src="/assets/images/brand/hookslink-logo-transparent.webp" 
+                 alt="HOOKSLINK Logo" 
+                 width="170" 
+                 height="45" 
+                 loading="lazy">
+          </a>
+          <p class="site-footer__brand-desc">
+            Hookslink helps businesses grow online with tailored digital solutions, expert marketing strategies, and modern web technology.
+          </p>
+          <div class="site-footer__social-list">
+            <a href="https://facebook.com/share/9dvBCWFuXyN1ytF7/?mibextid=LQQJ4d" 
+               class="site-footer__social-btn" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               aria-label="Follow HOOKSLINK on Facebook">
+              <svg class="site-footer__social-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/Hookslink" 
+               class="site-footer__social-btn" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               aria-label="Follow HOOKSLINK on Instagram">
+              <svg class="site-footer__social-icon" viewBox="0 0 24 24" fill="currentColor">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://tiktok.com/@hookslink" 
+               class="site-footer__social-btn" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               aria-label="Follow HOOKSLINK on TikTok">
+              <svg class="site-footer__social-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5v3a8 8 0 0 1-5-1.7V16a8 8 0 1 1-8-8c.34 0 .67.02 1 .07V12z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="site-footer__heading">Navigation</h3>
+          <ul class="site-footer__links">
+            <li><a href="/" class="site-footer__link">Home</a></li>
+            <li><a href="/about-us/" class="site-footer__link">About Us</a></li>
+            <li><a href="/services/" class="site-footer__link">Services</a></li>
+            <li><a href="/contact-us/" class="site-footer__link">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="site-footer__heading">Core Services</h3>
+          <ul class="site-footer__links">
+            <li><a href="/services/#web-dev" class="site-footer__link">Web Development</a></li>
+            <li><a href="/services/#seo" class="site-footer__link">Search Engine Optimization</a></li>
+            <li><a href="/services/#ppc" class="site-footer__link">Pay-Per-Click Advertising</a></li>
+            <li><a href="/services/#social" class="site-footer__link">Social Media Marketing</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="site-footer__heading">Contact Office</h3>
+          <address class="site-footer__links">
+            <p class="site-footer__link">1-2 Wensley Terrace, Ferryhill, DL17 0DA, UK</p>
+            <p><a href="tel:07871780500" class="site-footer__link">07871 780500</a></p>
+            <p><a href="mailto:info@hookslink.com" class="site-footer__link">info@hookslink.com</a></p>
+            <p class="text-muted mt-2">Company Number 15993172</p>
+          </address>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>&copy; <span data-current-year>2026</span> HOOKSLINK. All Rights Reserved.</p>
+        <div class="site-footer__legal-links">
+          <a href="/privacy-policy/" class="site-footer__link">Privacy Policy</a>
+          <a href="/terms-and-conditions/" class="site-footer__link">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>
