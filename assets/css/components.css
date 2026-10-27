@@ -1804,9 +1804,9 @@
   .cylinder-ticker {
     position: relative;
     width: 100%;
-    max-width: 960px;
+    max-width: 1080px;
     margin-inline: auto;
-    height: 340px;
+    height: 430px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1824,9 +1824,9 @@
   }
 
   .cylinder-ticker__ring {
-    --cylinder-radius: 300px;
-    --card-width: 145px;
-    --card-height: 95px;
+    --cylinder-radius: 400px;
+    --card-width: 195px;
+    --card-height: 120px;
     position: relative;
     width: var(--card-width);
     height: var(--card-height);
@@ -1880,14 +1880,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.85rem 1.15rem;
-    background: rgba(255, 255, 255, 0.95);
+    padding: 0.95rem 1.35rem;
+    background: rgba(255, 255, 255, 0.96);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border-radius: 18px;
+    border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.95);
-    box-shadow: 0 12px 30px -4px rgba(0, 0, 0, 0.5), 
-                0 0 18px -2px rgba(56, 189, 248, 0.3),
+    box-shadow: 0 14px 34px -4px rgba(0, 0, 0, 0.5), 
+                0 0 20px -2px rgba(56, 189, 248, 0.35),
                 inset 0 1px 1px #ffffff;
     transform: rotateY(calc(var(--i) * 36deg)) translateZ(var(--cylinder-radius));
     transition: transform var(--duration-fast) var(--ease-out), 
@@ -1897,8 +1897,8 @@
   }
 
   .cylinder-card:hover {
-    box-shadow: 0 18px 40px -4px rgba(0, 0, 0, 0.65), 
-                0 0 32px rgba(56, 189, 248, 0.6),
+    box-shadow: 0 20px 44px -4px rgba(0, 0, 0, 0.65), 
+                0 0 34px rgba(56, 189, 248, 0.6),
                 inset 0 1px 1px #ffffff;
     border-color: #38bdf8;
     transform: rotateY(calc(var(--i) * 36deg)) translateZ(calc(var(--cylinder-radius) + 18px)) scale(1.08);
@@ -1906,11 +1906,12 @@
   }
 
   .cylinder-card__logo {
-    max-height: 48px;
-    max-width: 125px;
+    max-height: 68px;
+    max-width: 165px;
     width: auto;
     object-fit: contain;
     filter: none;
+    image-rendering: -webkit-optimize-contrast;
     transition: transform var(--duration-fast) var(--ease-out);
   }
 
@@ -1921,20 +1922,20 @@
   /* Orbital Glow Arrow Streams */
   .cylinder-ticker__orbit-stream {
     position: absolute;
-    width: clamp(320px, 60vw, 540px);
-    height: 45px;
+    width: clamp(380px, 72vw, 700px);
+    height: 50px;
     pointer-events: none;
     z-index: 20;
   }
 
   .cylinder-ticker__orbit-stream--top {
-    top: 15px;
+    top: 8px;
     filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.85));
     animation: pulse-stream 2.4s ease-in-out infinite;
   }
 
   .cylinder-ticker__orbit-stream--bottom {
-    bottom: 15px;
+    bottom: 8px;
     filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.85));
     animation: pulse-stream 2.4s ease-in-out infinite reverse;
   }
@@ -1960,35 +1961,39 @@
   /* Responsive 3D Cylindrical Scaling */
   @media (max-width: 63.99rem) {
     .cylinder-ticker {
-      height: 300px;
+      height: 370px;
     }
     .cylinder-ticker__ring {
-      --cylinder-radius: 250px;
-      --card-width: 130px;
-      --card-height: 85px;
+      --cylinder-radius: 300px;
+      --card-width: 165px;
+      --card-height: 105px;
+    }
+    .cylinder-card {
+      padding: 0.8rem 1.15rem;
+      border-radius: 18px;
     }
     .cylinder-card__logo {
-      max-height: 42px;
-      max-width: 110px;
+      max-height: 56px;
+      max-width: 140px;
     }
   }
 
   @media (max-width: 39.99rem) {
     .cylinder-ticker {
-      height: 260px;
+      height: 310px;
     }
     .cylinder-ticker__ring {
-      --cylinder-radius: 185px;
-      --card-width: 105px;
-      --card-height: 72px;
+      --cylinder-radius: 225px;
+      --card-width: 135px;
+      --card-height: 85px;
     }
     .cylinder-card {
-      padding: 0.5rem 0.75rem;
+      padding: 0.6rem 0.9rem;
       border-radius: 14px;
     }
     .cylinder-card__logo {
-      max-height: 34px;
-      max-width: 90px;
+      max-height: 44px;
+      max-width: 110px;
     }
     .cylinder-ticker__orbit-stream--top {
       top: 5px;

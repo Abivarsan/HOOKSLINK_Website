@@ -16,13 +16,16 @@ export function initCylinderTicker(container) {
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // Rotation physics & RPM configuration
+  const targetRpm = parseFloat(container.dataset.rpm) || 2.0; // Revolutions Per Minute
+  const degPerSecond = targetRpm * (360 / 60); // 2.0 RPM = 12 deg/sec (30s per 360 deg)
+
   let currentRotation = 0; // degrees
   let isDragging = false;
   let startX = 0;
   let prevX = 0;
   let velocity = 0;
   let animationId = null;
-  let autoSpinSpeed = 0.16; // deg per frame (~30s for 360deg at 60fps)
   let lastTime = performance.now();
   let userInteracting = false;
   let resumeTimer = null;
@@ -32,15 +35,15 @@ export function initCylinderTicker(container) {
     const scene = container.querySelector('.cylinder-ticker__scene');
     const sceneWidth = scene ? scene.clientWidth : window.innerWidth;
     
-    let radius = 290;
+    let radius = 410;
     if (sceneWidth < 480) {
-      radius = 185;
+      radius = 225;
     } else if (sceneWidth < 768) {
-      radius = 230;
+      radius = 290;
     } else if (sceneWidth < 1024) {
-      radius = 280;
+      radius = 350;
     } else {
-      radius = 320;
+      radius = 410;
     }
 
     ring.style.setProperty('--cylinder-radius', `${radius}px`);
@@ -54,7 +57,7 @@ export function initCylinderTicker(container) {
     ring.style.transform = `rotateX(-10deg) rotateY(${currentRotation}deg)`;
   }
 
-  // Animation frame loop
+  // Animation frame loop using delta-time for exact RPM
   function tick(now) {
     const dt = Math.min((now - lastTime) / 1000, 0.1);
     lastTime = now;
@@ -66,8 +69,9 @@ export function initCylinderTicker(container) {
           currentRotation += velocity;
           velocity *= 0.92;
         } else if (!userInteracting) {
-          // Smooth continuous auto-spin
-          currentRotation = (currentRotation - autoSpinSpeed) % 360;
+          // Smooth continuous auto-spin synchronized to exact RPM
+          const deltaRotation = degPerSecond * dt;
+          currentRotation = (currentRotation - deltaRotation) % 360;
         }
         applyTransform();
       }
