@@ -33,6 +33,7 @@
   <link rel="stylesheet" href="/assets/css/layout.css">
   <link rel="stylesheet" href="/assets/css/components.css">
   <link rel="stylesheet" href="/assets/css/utilities.css">
+  <link rel="stylesheet" href="/assets/css/tailwind.css">
   <link rel="stylesheet" href="/assets/css/pages/home.css">
 
   <!-- Schema.org Structured Data -->
@@ -171,75 +172,156 @@
           </div>
         </div>
 
-        <!-- Interactive Brand Visual -->
-        <div class="hero__visual" data-reveal aria-hidden="true">
-          <div class="hero__orbit-ring hero__orbit-ring--outer"></div>
-          <div class="hero__orbit-ring hero__orbit-ring--inner"></div>
+        <!-- Realistic Interactive Live Agency Growth Hub -->
+        <div class="hero__growth-hub" data-reveal aria-hidden="true">
+          <div class="growth-hub-card">
+            <div class="growth-hub__topbar">
+              <div class="growth-hub__dots" aria-hidden="true">
+                <span class="growth-hub__dot growth-hub__dot--red"></span>
+                <span class="growth-hub__dot growth-hub__dot--amber"></span>
+                <span class="growth-hub__dot growth-hub__dot--green"></span>
+              </div>
+              <div class="growth-hub__status">
+                <span class="growth-hub__pulse" aria-hidden="true"></span>
+                <span>AI Growth Engine • Live UK Network</span>
+              </div>
+            </div>
 
-          <!-- Floating Tags -->
-          <div class="hero__float-tag hero__float-tag--top">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16C8FF" stroke-width="2">
-              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
-              <polyline points="17 6 23 6 23 12"></polyline>
-            </svg>
-            <span>Data-Driven ROI Growth</span>
-          </div>
+            <div class="growth-hub__metrics">
+              <div class="growth-hub__metric-box">
+                <div class="growth-hub__metric-val text-gradient">4.8x</div>
+                <div class="growth-hub__metric-label">Average Campaign ROAS</div>
+                <div class="growth-hub__badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                  <span>+142% vs Industry Avg</span>
+                </div>
+              </div>
+              <div class="growth-hub__metric-box">
+                <div class="growth-hub__metric-val text-gradient-cyan">100/100</div>
+                <div class="growth-hub__metric-label">Core Web Vitals Speed</div>
+                <div class="growth-hub__badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Sub-Second TTFB</span>
+                </div>
+              </div>
+            </div>
 
-          <div class="hero__float-tag hero__float-tag--bottom">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-            </svg>
-            <span>100% Quality Driven</span>
-          </div>
+            <div class="growth-hub__channels">
+              <div class="growth-hub__channel-title">Omnichannel Attribution Mix</div>
+              <div class="growth-hub__bar-track" aria-hidden="true">
+                <div class="growth-hub__bar-seg--blue"></div>
+                <div class="growth-hub__bar-seg--coral"></div>
+                <div class="growth-hub__bar-seg--emerald"></div>
+              </div>
+              <div class="growth-hub__legend">
+                <div class="growth-hub__legend-item">
+                  <span class="growth-hub__legend-color bg-indigo-legend" aria-hidden="true"></span>
+                  <span>Google Ads (42%)</span>
+                </div>
+                <div class="growth-hub__legend-item">
+                  <span class="growth-hub__legend-color bg-coral-legend" aria-hidden="true"></span>
+                  <span>Paid Social (34%)</span>
+                </div>
+                <div class="growth-hub__legend-item">
+                  <span class="growth-hub__legend-color bg-emerald-legend" aria-hidden="true"></span>
+                  <span>Organic SEO (24%)</span>
+                </div>
+              </div>
+            </div>
 
-          <!-- Center Glowing Brand Core -->
-          <div class="hero__center-badge">
-            <img src="/assets/icons/favicon.svg" alt="" class="hero__center-symbol" width="90" height="90">
-            <span class="hero__center-tagline">Powering Growth</span>
+            <div class="growth-hub__live-toast">
+              <div class="growth-hub__toast-avatar" aria-hidden="true">TC</div>
+              <div class="growth-hub__toast-content">
+                <span class="growth-hub__toast-title">New High-Intent Conversion</span>
+                <span class="growth-hub__toast-sub">TAM Chicken • Local Search Campaign (2 mins ago)</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Trusted By / Marquee Section -->
-    <section class="section section--bordered section--alt" aria-label="Trusted Clients and Partners">
+    <!-- Trusted By / 10-Client Dual Kinetic Showcase Section -->
+    <section class="section section--bordered section--alt" aria-label="Trusted Clients and Commercial Partners">
       <div class="container text-center mb-8">
-        <p class="section-header__tag">Trusted By Forward-Thinking Brands</p>
+        <span class="section-header__tag">Trusted By Forward-Thinking UK Brands</span>
+        <h2 class="text-xl font-bold mt-2 text-dark">Proven Partnerships Across Retail, Logistics &amp; Enterprise</h2>
       </div>
 
-      <div class="marquee">
-        <div class="marquee__inner">
-          <div class="marquee__item">
-            <img src="/assets/images/clients/tam-chicken.webp" alt="TAM Chicken" class="marquee__logo" width="130" height="48" loading="lazy">
-          </div>
-          <div class="marquee__item">
-            <img src="/assets/images/clients/vextroo-group.webp" alt="Vextroo Group" class="marquee__logo" width="130" height="48" loading="lazy">
-          </div>
-          <div class="marquee__item">
-            <img src="/assets/images/clients/sk-family-transport.webp" alt="SK &amp; Transport" class="marquee__logo" width="130" height="48" loading="lazy">
-          </div>
-          <div class="marquee__item">
-            <img src="/assets/images/clients/agnes-road.webp" alt="Agnes Road" class="marquee__logo" width="130" height="48" loading="lazy">
-          </div>
-          <div class="marquee__item">
-            <img src="/assets/images/clients/everstar-maintenance.webp" alt="Ever Start Maintenance" class="marquee__logo" width="130" height="48" loading="lazy">
-          </div>
+      <div class="marquee--dual">
+        <!-- Track 1 (Gliding Left) -->
+        <div class="marquee">
+          <div class="marquee__inner">
+            <div class="client-card">
+              <img src="/assets/images/clients/vextroo-group.webp" alt="Vextroo Group Construction" class="client-card__logo" width="160" height="44" loading="lazy">
+            </div>
+            <div class="client-card">
+              <img src="/assets/images/clients/jumpgolocal.webp" alt="Jumpgolocal Retail" class="client-card__logo" width="160" height="44" loading="lazy">
+            </div>
+            <div class="client-card">
+              <img src="/assets/images/clients/tam-chicken.webp" alt="TAM Chicken Restaurants" class="client-card__logo" width="140" height="44" loading="lazy">
+            </div>
+            <div class="client-card">
+              <img src="/assets/images/clients/ambush-street-minimarket.webp" alt="Ambush Street Minimarket" class="client-card__logo" width="60" height="44" loading="lazy">
+            </div>
+            <div class="client-card">
+              <img src="/assets/images/clients/agnes-road.webp" alt="Agnes Road Properties" class="client-card__logo" width="140" height="44" loading="lazy">
+            </div>
 
-          <!-- Duplicate for seamless loop (hidden from screen readers) -->
-          <div class="marquee__item" aria-hidden="true">
-            <img src="/assets/images/clients/tam-chicken.webp" alt="" class="marquee__logo" width="130" height="48" loading="lazy">
+            <!-- Loop 1 duplicates -->
+            <div class="client-card" aria-hidden="true">
+              <img src="/assets/images/clients/vextroo-group.webp" alt="" class="client-card__logo" width="160" height="44" loading="lazy">
+            </div>
+            <div class="client-card" aria-hidden="true">
+              <img src="/assets/images/clients/jumpgolocal.webp" alt="" class="client-card__logo" width="160" height="44" loading="lazy">
+            </div>
+            <div class="client-card" aria-hidden="true">
+              <img src="/assets/images/clients/tam-chicken.webp" alt="" class="client-card__logo" width="140" height="44" loading="lazy">
+            </div>
+            <div class="client-card" aria-hidden="true">
+              <img src="/assets/images/clients/ambush-street-minimarket.webp" alt="" class="client-card__logo" width="60" height="44" loading="lazy">
+            </div>
+            <div class="client-card" aria-hidden="true">
+              <img src="/assets/images/clients/agnes-road.webp" alt="" class="client-card__logo" width="140" height="44" loading="lazy">
+            </div>
           </div>
-          <div class="marquee__item" aria-hidden="true">
-            <img src="/assets/images/clients/vextroo-group.webp" alt="" class="marquee__logo" width="130" height="48" loading="lazy">
-          </div>
-          <div class="marquee__item" aria-hidden="true">
-            <img src="/assets/images/clients/sk-family-transport.webp" alt="" class="marquee__logo" width="130" height="48" loading="lazy">
-          </div>
-          <div class="marquee__item" aria-hidden="true">
-            <img src="/assets/images/clients/agnes-road.webp" alt="" class="marquee__logo" width="130" height="48" loading="lazy">
-          </div>
-          <div class="marquee__item" aria-hidden="true">
-            <img src="/assets/images/clients/everstar-maintenance.webp" alt="" class="marquee__logo" width="130" height="48" loading="lazy">
+        </div>
+
+        <!-- Track 2 (Gliding Right) -->
+        <div class="marquee">
+          <div class="marquee__inner marquee__inner--rev">
+            <div class="client-card">
+              <img src="/assets/images/clients/sk-family-transport.webp" alt="SK &amp; Transport Logistics" class="client-card__logo" width="150" height="44" loading="lazy">
+            </div>
+            <div class="client-card">
+              <img src="/assets/images/clients/rasis-go-local.webp" alt="Rasi's Go Local Store" class="client-card__logo" width="160" height="44" loading="lazy">
+            </div>
+            <div class="client-card">
+              <img src="/assets/images/clients/everstar-maintenance.webp" alt="Everstar Maintenance Facilities" class="client-card__logo" width="150" height="44" loading="lazy">
+            </div>
+            <div class="client-card">
+              <img src="/assets/images/clients/st-james-superstore.webp" alt="St James Superstore" class="client-card__logo" width="160" height="44" loading="lazy">
+            </div>
+            <div class="client-card">
+              <img src="/assets/images/clients/holbeach-drove-store.webp" alt="Holbeach Drove Store &amp; Filling Station" class="client-card__logo" width="120" height="44" loading="lazy">
+            </div>
+
+            <!-- Loop 2 duplicates -->
+            <div class="client-card" aria-hidden="true">
+              <img src="/assets/images/clients/sk-family-transport.webp" alt="" class="client-card__logo" width="150" height="44" loading="lazy">
+            </div>
+            <div class="client-card" aria-hidden="true">
+              <img src="/assets/images/clients/rasis-go-local.webp" alt="" class="client-card__logo" width="160" height="44" loading="lazy">
+            </div>
+            <div class="client-card" aria-hidden="true">
+              <img src="/assets/images/clients/everstar-maintenance.webp" alt="" class="client-card__logo" width="150" height="44" loading="lazy">
+            </div>
+            <div class="client-card" aria-hidden="true">
+              <img src="/assets/images/clients/st-james-superstore.webp" alt="" class="client-card__logo" width="160" height="44" loading="lazy">
+            </div>
+            <div class="client-card" aria-hidden="true">
+              <img src="/assets/images/clients/holbeach-drove-store.webp" alt="" class="client-card__logo" width="120" height="44" loading="lazy">
+            </div>
           </div>
         </div>
       </div>
@@ -286,12 +368,14 @@
           <!-- Service 1: Web Design & Development (Prominent Feature) -->
           <article class="card card--spotlight service-card" data-stage-target="1" data-spotlight data-reveal>
             <div>
-              <span class="service-card__badge">Core Capability</span>
-              <div class="service-card__icon-wrapper" aria-hidden="true">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="16 18 22 12 16 6"></polyline>
-                  <polyline points="8 6 2 12 8 18"></polyline>
-                </svg>
+              <div class="service-card__media">
+                <img src="/assets/images/services/service-web-development.webp" 
+                     alt="Modern Web Design &amp; Development Workspace Preview" 
+                     class="service-card__img" 
+                     width="800" 
+                     height="500" 
+                     loading="lazy">
+                <span class="service-card__category-badge service-card__category-badge--indigo">Web Engineering</span>
               </div>
               <h3 class="service-card__title">Web Design &amp; Development</h3>
               <p class="service-card__desc">
@@ -323,12 +407,14 @@
           <!-- Service 2: SEO -->
           <article class="card card--spotlight service-card" data-stage-target="2" data-spotlight data-reveal>
             <div>
-              <span class="service-card__badge">Organic Growth</span>
-              <div class="service-card__icon-wrapper" aria-hidden="true">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
+              <div class="service-card__media">
+                <img src="/assets/images/services/service-seo.webp" 
+                     alt="Google Search Console &amp; SEO Keyword Growth Analytics" 
+                     class="service-card__img" 
+                     width="800" 
+                     height="500" 
+                     loading="lazy">
+                <span class="service-card__category-badge service-card__category-badge--emerald">Organic Search</span>
               </div>
               <h3 class="service-card__title">Search Engine Optimization (SEO)</h3>
               <p class="service-card__desc">
@@ -360,13 +446,14 @@
           <!-- Service 3: PPC Advertising -->
           <article class="card card--spotlight service-card" data-stage-target="2" data-spotlight data-reveal>
             <div>
-              <span class="service-card__badge">High ROI</span>
-              <div class="service-card__icon-wrapper" aria-hidden="true">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                  <line x1="8" y1="21" x2="16" y2="21"></line>
-                  <line x1="12" y1="17" x2="12" y2="21"></line>
-                </svg>
+              <div class="service-card__media">
+                <img src="/assets/images/services/service-ppc.webp" 
+                     alt="Multi-Channel PPC Ad Campaign Command Center" 
+                     class="service-card__img" 
+                     width="800" 
+                     height="500" 
+                     loading="lazy">
+                <span class="service-card__category-badge service-card__category-badge--coral">Paid Acquisition</span>
               </div>
               <h3 class="service-card__title">Pay-Per-Click Advertising (PPC)</h3>
               <p class="service-card__desc">
@@ -398,11 +485,14 @@
           <!-- Service 4: Social Media Marketing -->
           <article class="card card--spotlight service-card" data-stage-target="2" data-spotlight data-reveal>
             <div>
-              <span class="service-card__badge">Brand Engagement</span>
-              <div class="service-card__icon-wrapper" aria-hidden="true">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                </svg>
+              <div class="service-card__media">
+                <img src="/assets/images/services/service-social.webp" 
+                     alt="Social Media Creative Content and Video Creator Studio" 
+                     class="service-card__img" 
+                     width="800" 
+                     height="500" 
+                     loading="lazy">
+                <span class="service-card__category-badge service-card__category-badge--magenta">Social Reach</span>
               </div>
               <h3 class="service-card__title">Social Media Marketing</h3>
               <p class="service-card__desc">
@@ -428,14 +518,14 @@
           <!-- Service 5: Branding & Creative Design -->
           <article class="card card--spotlight service-card" data-stage-target="1" data-spotlight data-reveal>
             <div>
-              <span class="service-card__badge">Visual Identity</span>
-              <div class="service-card__icon-wrapper" aria-hidden="true">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
-                  <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
-                  <path d="M2 2l7.586 7.586"></path>
-                  <circle cx="11" cy="11" r="2"></circle>
-                </svg>
+              <div class="service-card__media">
+                <img src="/assets/images/services/service-branding.webp" 
+                     alt="Luxury Brand Identity Stationery Kit Mockup" 
+                     class="service-card__img" 
+                     width="800" 
+                     height="500" 
+                     loading="lazy">
+                <span class="service-card__category-badge service-card__category-badge--violet">Brand Identity</span>
               </div>
               <h3 class="service-card__title">Branding &amp; Creative Design</h3>
               <p class="service-card__desc">
@@ -461,12 +551,14 @@
           <!-- Service 6: AI-Powered Strategies -->
           <article class="card card--spotlight service-card" data-stage-target="3" data-spotlight data-reveal>
             <div>
-              <span class="service-card__badge">Innovation</span>
-              <div class="service-card__icon-wrapper" aria-hidden="true">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="3"></circle>
-                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-                </svg>
+              <div class="service-card__media">
+                <img src="/assets/images/services/service-ai-marketing.webp" 
+                     alt="Predictive AI Marketing Algorithms &amp; Audience Segmentation" 
+                     class="service-card__img" 
+                     width="800" 
+                     height="500" 
+                     loading="lazy">
+                <span class="service-card__category-badge service-card__category-badge--cyan">Predictive AI</span>
               </div>
               <h3 class="service-card__title">AI-Powered Marketing</h3>
               <p class="service-card__desc">

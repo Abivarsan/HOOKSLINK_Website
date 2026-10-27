@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "npx serve .",
     "validate:html": "html-validate \"**/*.html\"",
-    "process:assets": "node scripts/process-assets.js"
+    "process:assets": "node scripts/process-assets.js",
+    "build:css": "tailwindcss -i assets/css/input.css -o assets/css/tailwind.css --minify"
   },
   "keywords": [
     "hookslink",
@@ -17,8 +18,10 @@
   "author": "HOOKSLINK",
   "license": "UNLICENSED",
   "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
     "html-validate": "^9.0.0",
-    "sharp": "^0.34.0"
+    "sharp": "^0.34.0",
+    "tailwindcss": "^4.3.3"
   },
   "engines": {
     "node": ">=20"

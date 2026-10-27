@@ -30,6 +30,7 @@
   <link rel="stylesheet" href="/assets/css/layout.css">
   <link rel="stylesheet" href="/assets/css/components.css">
   <link rel="stylesheet" href="/assets/css/utilities.css">
+  <link rel="stylesheet" href="/assets/css/tailwind.css">
   <link rel="stylesheet" href="/assets/css/pages/about.css">
 </head>
 <body>
@@ -316,48 +317,92 @@
       </div>
     </section>
 
-    <!-- Client Partners -->
-    <section class="section section--bordered section--alt" aria-label="Clients and Partners">
-      <div class="container text-center mb-8">
+    <!-- Client Partners: 10-Client Dual Kinetic Showcase -->
+    <section class="section section--bordered section--alt" aria-label="Clients and Partners Network">
+      <div class="container text-center mb-8" data-reveal>
         <span class="section-header__tag">Our Client Network</span>
         <h2 class="section-header__title">
           Trusted by Companies <span class="text-gradient">Across the UK</span>
         </h2>
+        <p class="section-header__desc mx-auto max-w-prose">
+          We partner with forward-thinking commercial leaders in construction, supermarkets, convenience retail, logistics, property, and culinary hospitality.
+        </p>
       </div>
 
-      <div class="marquee">
-        <div class="marquee__inner">
-          <div class="marquee__item">
-            <img src="/assets/images/clients/tam-chicken.webp" alt="TAM Chicken" class="marquee__logo" width="130" height="48" loading="lazy">
-          </div>
-          <div class="marquee__item">
-            <img src="/assets/images/clients/vextroo-group.webp" alt="Vextroo Group" class="marquee__logo" width="130" height="48" loading="lazy">
-          </div>
-          <div class="marquee__item">
-            <img src="/assets/images/clients/sk-family-transport.webp" alt="SK &amp; Transport" class="marquee__logo" width="130" height="48" loading="lazy">
-          </div>
-          <div class="marquee__item">
-            <img src="/assets/images/clients/agnes-road.webp" alt="Agnes Road" class="marquee__logo" width="130" height="48" loading="lazy">
-          </div>
-          <div class="marquee__item">
-            <img src="/assets/images/clients/everstar-maintenance.webp" alt="Ever Start Maintenance" class="marquee__logo" width="130" height="48" loading="lazy">
-          </div>
+      <div class="marquee--dual" data-reveal>
+        <!-- Track 1 -->
+        <div class="marquee">
+          <div class="marquee__inner">
+            <div class="client-card">
+              <img src="/assets/images/clients/vextroo-group.webp" alt="Vextroo Group" class="client-card__logo" width="160" height="44" loading="lazy">
+            </div>
+            <div class="client-card">
+              <img src="/assets/images/clients/jumpgolocal.webp" alt="Jumpgolocal" class="client-card__logo" width="160" height="44" loading="lazy">
+            </div>
+            <div class="client-card">
+              <img src="/assets/images/clients/tam-chicken.webp" alt="TAM Chicken" class="client-card__logo" width="140" height="44" loading="lazy">
+            </div>
+            <div class="client-card">
+              <img src="/assets/images/clients/ambush-street-minimarket.webp" alt="Ambush Street Minimarket" class="client-card__logo" width="60" height="44" loading="lazy">
+            </div>
+            <div class="client-card">
+              <img src="/assets/images/clients/agnes-road.webp" alt="Agnes Road" class="client-card__logo" width="140" height="44" loading="lazy">
+            </div>
 
-          <!-- Loop duplicates -->
-          <div class="marquee__item" aria-hidden="true">
-            <img src="/assets/images/clients/tam-chicken.webp" alt="" class="marquee__logo" width="130" height="48" loading="lazy">
+            <!-- Loop 1 duplicates -->
+            <div class="client-card" aria-hidden="true">
+              <img src="/assets/images/clients/vextroo-group.webp" alt="" class="client-card__logo" width="160" height="44" loading="lazy">
+            </div>
+            <div class="client-card" aria-hidden="true">
+              <img src="/assets/images/clients/jumpgolocal.webp" alt="" class="client-card__logo" width="160" height="44" loading="lazy">
+            </div>
+            <div class="client-card" aria-hidden="true">
+              <img src="/assets/images/clients/tam-chicken.webp" alt="" class="client-card__logo" width="140" height="44" loading="lazy">
+            </div>
+            <div class="client-card" aria-hidden="true">
+              <img src="/assets/images/clients/ambush-street-minimarket.webp" alt="" class="client-card__logo" width="60" height="44" loading="lazy">
+            </div>
+            <div class="client-card" aria-hidden="true">
+              <img src="/assets/images/clients/agnes-road.webp" alt="" class="client-card__logo" width="140" height="44" loading="lazy">
+            </div>
           </div>
-          <div class="marquee__item" aria-hidden="true">
-            <img src="/assets/images/clients/vextroo-group.webp" alt="" class="marquee__logo" width="130" height="48" loading="lazy">
-          </div>
-          <div class="marquee__item" aria-hidden="true">
-            <img src="/assets/images/clients/sk-family-transport.webp" alt="" class="marquee__logo" width="130" height="48" loading="lazy">
-          </div>
-          <div class="marquee__item" aria-hidden="true">
-            <img src="/assets/images/clients/agnes-road.webp" alt="" class="marquee__logo" width="130" height="48" loading="lazy">
-          </div>
-          <div class="marquee__item" aria-hidden="true">
-            <img src="/assets/images/clients/everstar-maintenance.webp" alt="" class="marquee__logo" width="130" height="48" loading="lazy">
+        </div>
+
+        <!-- Track 2 -->
+        <div class="marquee">
+          <div class="marquee__inner marquee__inner--rev">
+            <div class="client-card">
+              <img src="/assets/images/clients/sk-family-transport.webp" alt="SK &amp; Transport" class="client-card__logo" width="150" height="44" loading="lazy">
+            </div>
+            <div class="client-card">
+              <img src="/assets/images/clients/rasis-go-local.webp" alt="Rasi's Go Local" class="client-card__logo" width="160" height="44" loading="lazy">
+            </div>
+            <div class="client-card">
+              <img src="/assets/images/clients/everstar-maintenance.webp" alt="Everstar Maintenance" class="client-card__logo" width="150" height="44" loading="lazy">
+            </div>
+            <div class="client-card">
+              <img src="/assets/images/clients/st-james-superstore.webp" alt="St James Superstore" class="client-card__logo" width="160" height="44" loading="lazy">
+            </div>
+            <div class="client-card">
+              <img src="/assets/images/clients/holbeach-drove-store.webp" alt="Holbeach Drove Store" class="client-card__logo" width="120" height="44" loading="lazy">
+            </div>
+
+            <!-- Loop 2 duplicates -->
+            <div class="client-card" aria-hidden="true">
+              <img src="/assets/images/clients/sk-family-transport.webp" alt="" class="client-card__logo" width="150" height="44" loading="lazy">
+            </div>
+            <div class="client-card" aria-hidden="true">
+              <img src="/assets/images/clients/rasis-go-local.webp" alt="" class="client-card__logo" width="160" height="44" loading="lazy">
+            </div>
+            <div class="client-card" aria-hidden="true">
+              <img src="/assets/images/clients/everstar-maintenance.webp" alt="" class="client-card__logo" width="150" height="44" loading="lazy">
+            </div>
+            <div class="client-card" aria-hidden="true">
+              <img src="/assets/images/clients/st-james-superstore.webp" alt="" class="client-card__logo" width="160" height="44" loading="lazy">
+            </div>
+            <div class="client-card" aria-hidden="true">
+              <img src="/assets/images/clients/holbeach-drove-store.webp" alt="" class="client-card__logo" width="120" height="44" loading="lazy">
+            </div>
           </div>
         </div>
       </div>

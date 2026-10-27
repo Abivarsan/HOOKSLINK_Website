@@ -25,22 +25,48 @@
   }
 
   :root {
-    /* Brand Color Architecture */
+    /* Brand Color Architecture - V4 Vibrant Multi-Accent System */
     --color-black: #0a0d14;            /* Obsidian display black */
     --color-white: #ffffff;            /* Pure white canvas */
-    --color-royal-blue: #0044ff;       /* Primary action blue (6.8:1 contrast on white) */
-    --color-cyan-blue: #0099ff;        /* Vibrant high-energy accent */
-    --color-royal-blue-rgb: 0, 68, 255;
-    --color-cyan-blue-rgb: 0, 153, 255;
+    --color-royal-blue: #2563eb;       /* Primary action blue (WCAG AAA) */
+    --color-indigo: #4f46e5;           /* Electric indigo brand primary */
+    --color-cyan-blue: #06b6d4;        /* Vibrant cyber cyan accent */
+    --color-violet: #8b5cf6;           /* Creative vivid violet */
+    --color-magenta: #ec4899;          /* High-impact magenta */
+    --color-coral: #f43f5e;            /* Sunset coral / high conversion */
+    --color-amber: #f59e0b;            /* Warm amber gold */
+    --color-emerald: #10b981;          /* Growth emerald mint */
+
+    --color-royal-blue-rgb: 37, 99, 235;
+    --color-indigo-rgb: 79, 70, 229;
+    --color-cyan-blue-rgb: 6, 182, 212;
+    --color-violet-rgb: 139, 92, 246;
+    --color-coral-rgb: 244, 63, 94;
+    --color-emerald-rgb: 16, 185, 129;
+
     --color-blue-tint: #f0f6ff;        /* Soft ice blue fill for badges & containers */
     --color-blue-tint-hover: #e0edff;  /* Hover state for tinted elements */
 
-    /* Brand Gradients */
-    --gradient-brand: linear-gradient(135deg, var(--color-royal-blue) 0%, var(--color-cyan-blue) 100%);
-    --gradient-brand-subtle: linear-gradient(135deg, rgba(0, 68, 255, 0.08) 0%, rgba(0, 153, 255, 0.04) 100%);
-    --gradient-glow: radial-gradient(circle at center, rgba(0, 68, 255, 0.12) 0%, rgba(0, 153, 255, 0.03) 50%, transparent 70%);
-    --gradient-mesh: radial-gradient(at 0% 0%, rgba(0, 68, 255, 0.08) 0px, transparent 50%),
-                     radial-gradient(at 100% 100%, rgba(0, 153, 255, 0.06) 0px, transparent 50%);
+    /* Brand Gradients & Vibrant Dynamic Mesh */
+    --gradient-brand: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+    --gradient-creative: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+    --gradient-growth: linear-gradient(135deg, #059669 0%, #10b981 50%, #06b6d4 100%);
+    --gradient-energy: linear-gradient(135deg, #f43f5e 0%, #f59e0b 100%);
+    --gradient-brand-subtle: linear-gradient(135deg, rgba(79, 70, 229, 0.08) 0%, rgba(6, 182, 212, 0.04) 100%);
+    --gradient-glow: radial-gradient(circle at center, rgba(79, 70, 229, 0.16) 0%, rgba(6, 182, 212, 0.04) 50%, transparent 70%);
+    --gradient-mesh: radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.12) 0px, transparent 50%),
+                     radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.08) 0px, transparent 50%),
+                     radial-gradient(at 100% 100%, rgba(6, 182, 212, 0.1) 0px, transparent 50%),
+                     radial-gradient(at 0% 100%, rgba(139, 92, 246, 0.08) 0px, transparent 50%);
+
+    /* Modern Glassmorphism System */
+    --glass-bg: rgba(255, 255, 255, 0.76);
+    --glass-bg-elevated: rgba(255, 255, 255, 0.88);
+    --glass-blur: blur(20px) saturate(180%);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.6);
+    --glass-border-subtle: 1px solid rgba(226, 232, 240, 0.8);
+    --glass-shadow: 0 8px 32px 0 rgba(15, 23, 42, 0.06);
+    --glass-specular: inset 0 1px 0 rgba(255, 255, 255, 0.8);
 
     /* Surface Hierarchy (Pure White & Light Slate Modern Palette) */
     --color-bg: #ffffff;               /* Pure white page background */

@@ -168,4 +168,10 @@
   .glow-orb--services-cyan { top: 10%; right: 20%; }
   .glow-orb--contact-blue { top: 15%; left: 30%; }
   .glow-orb--404-blue { top: 25%; left: 35%; }
+
+  /* Legend and Badge utility colors (CSP compliant without inline styles) */
+  .bg-indigo-legend { background: #4f46e5; }
+  .bg-coral-legend { background: #f43f5e; }
+  .bg-emerald-legend { background: #10b981; }
+
 }
