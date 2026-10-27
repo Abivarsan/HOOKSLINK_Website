@@ -1748,6 +1748,24 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
   }
 
+  .service-card__category-badge--amber {
+    background: rgba(217, 119, 6, 0.9);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .service-card__category-badge--blue {
+    background: rgba(37, 99, 235, 0.9);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .service-card__category-badge--teal {
+    background: rgba(13, 148, 136, 0.9);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
   /* Dual Kinetic Client Marquee Track */
   .marquee--dual {
     display: flex;
