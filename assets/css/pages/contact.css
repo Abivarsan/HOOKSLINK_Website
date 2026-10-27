@@ -22,7 +22,8 @@
   }
 
   .contact-info-card {
-    background: #ffffff;
+    background: linear-gradient(145deg, rgba(15, 23, 42, 0.85) 0%, rgba(10, 15, 29, 0.95) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border: 1px solid var(--color-border-subtle);
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-sm);
@@ -72,7 +73,8 @@
   }
 
   .contact-form-card {
-    background: #ffffff;
+    background: linear-gradient(145deg, rgba(15, 23, 42, 0.88) 0%, rgba(10, 15, 29, 0.98) 100%);
+    border: 1px solid rgba(56, 189, 248, 0.2);
     border: 1px solid var(--color-border-subtle);
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-sm);

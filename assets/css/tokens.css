@@ -1,5 +1,5 @@
 /* ==========================================================================
-   HOOKSLINK - Design Tokens & Cascade Layers (V3 Creative Modern Theme)
+   HOOKSLINK - Design Tokens & Cascade Layers (Modern Obsidian & Cyan Theme)
    ========================================================================== */
 
 @layer tokens, reset, base, layout, components, pages, utilities;
@@ -25,11 +25,11 @@
   }
 
   :root {
-    /* Brand Color Architecture - V4 Vibrant Multi-Accent System */
-    --color-black: #0a0d14;            /* Obsidian display black */
-    --color-white: #ffffff;            /* Pure white canvas */
-    --color-royal-blue: #2563eb;       /* Primary action blue (WCAG AAA) */
-    --color-indigo: #4f46e5;           /* Electric indigo brand primary */
+    /* Brand Color Architecture - Modern Obsidian & Cyan/Indigo Luxury Dark System */
+    --color-black: #05070c;            /* Absolute deepest black */
+    --color-white: #ffffff;            /* Pure white */
+    --color-royal-blue: #38bdf8;       /* Luminescent cyan-blue (WCAG AAA on dark) */
+    --color-indigo: #6366f1;           /* Electric indigo brand primary */
     --color-cyan-blue: #06b6d4;        /* Vibrant cyber cyan accent */
     --color-violet: #8b5cf6;           /* Creative vivid violet */
     --color-magenta: #ec4899;          /* High-impact magenta */
@@ -37,57 +37,60 @@
     --color-amber: #f59e0b;            /* Warm amber gold */
     --color-emerald: #10b981;          /* Growth emerald mint */
 
-    --color-royal-blue-rgb: 37, 99, 235;
-    --color-indigo-rgb: 79, 70, 229;
+    --color-royal-blue-rgb: 56, 189, 248;
+    --color-indigo-rgb: 99, 102, 241;
     --color-cyan-blue-rgb: 6, 182, 212;
     --color-violet-rgb: 139, 92, 246;
     --color-coral-rgb: 244, 63, 94;
     --color-emerald-rgb: 16, 185, 129;
 
-    --color-blue-tint: #f0f6ff;        /* Soft ice blue fill for badges & containers */
-    --color-blue-tint-hover: #e0edff;  /* Hover state for tinted elements */
+    --color-blue-tint: rgba(56, 189, 248, 0.08);       /* Soft cyan glow fill */
+    --color-blue-tint-hover: rgba(56, 189, 248, 0.16); /* Hover state */
 
     /* Brand Gradients & Vibrant Dynamic Mesh */
-    --gradient-brand: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+    --gradient-brand: linear-gradient(135deg, #38bdf8 0%, #6366f1 100%);
     --gradient-creative: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
     --gradient-growth: linear-gradient(135deg, #059669 0%, #10b981 50%, #06b6d4 100%);
     --gradient-energy: linear-gradient(135deg, #f43f5e 0%, #f59e0b 100%);
-    --gradient-brand-subtle: linear-gradient(135deg, rgba(79, 70, 229, 0.08) 0%, rgba(6, 182, 212, 0.04) 100%);
-    --gradient-glow: radial-gradient(circle at center, rgba(79, 70, 229, 0.16) 0%, rgba(6, 182, 212, 0.04) 50%, transparent 70%);
-    --gradient-mesh: radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.12) 0px, transparent 50%),
-                     radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.08) 0px, transparent 50%),
-                     radial-gradient(at 100% 100%, rgba(6, 182, 212, 0.1) 0px, transparent 50%),
-                     radial-gradient(at 0% 100%, rgba(139, 92, 246, 0.08) 0px, transparent 50%);
+    --gradient-fluid: linear-gradient(135deg, #0284c7 0%, #06b6d4 50%, #38bdf8 100%);
+    --gradient-dark-card: linear-gradient(145deg, rgba(15, 23, 42, 0.8) 0%, rgba(10, 15, 29, 0.95) 100%);
+    --gradient-brand-subtle: linear-gradient(135deg, rgba(56, 189, 248, 0.12) 0%, rgba(99, 102, 241, 0.06) 100%);
+    --gradient-glow: radial-gradient(circle at center, rgba(56, 189, 248, 0.18) 0%, rgba(99, 102, 241, 0.05) 50%, transparent 70%);
+    --gradient-mesh: radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.12) 0px, transparent 50%),
+                     radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.10) 0px, transparent 50%),
+                     radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.08) 0px, transparent 50%),
+                     radial-gradient(at 0% 100%, rgba(139, 92, 246, 0.10) 0px, transparent 50%);
 
-    /* Modern Glassmorphism System */
-    --glass-bg: rgba(255, 255, 255, 0.76);
-    --glass-bg-elevated: rgba(255, 255, 255, 0.88);
-    --glass-blur: blur(20px) saturate(180%);
-    --glass-border: 1px solid rgba(255, 255, 255, 0.6);
-    --glass-border-subtle: 1px solid rgba(226, 232, 240, 0.8);
-    --glass-shadow: 0 8px 32px 0 rgba(15, 23, 42, 0.06);
-    --glass-specular: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    /* Modern Dark Glassmorphism System */
+    --glass-bg: rgba(15, 23, 42, 0.72);
+    --glass-bg-elevated: rgba(15, 23, 42, 0.88);
+    --glass-blur: blur(24px) saturate(190%);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.10);
+    --glass-border-subtle: 1px solid rgba(255, 255, 255, 0.06);
+    --glass-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.6);
+    --glass-specular: inset 0 1px 0 rgba(255, 255, 255, 0.15);
 
-    /* Surface Hierarchy (Pure White & Light Slate Modern Palette) */
-    --color-bg: #ffffff;               /* Pure white page background */
-    --color-surface-base: #f8fafc;     /* Clean light slate for alternating sections & footer */
-    --color-surface-card: #ffffff;     /* Pure white cards with soft drop shadows */
-    --color-surface-hover: #f1f5f9;    /* Subtle hover fill */
-    --color-surface-elevated: #ffffff; /* Elevated dialogs / drawers */
+    /* Surface Hierarchy (Obsidian & Deep Space Modern Palette) */
+    --color-bg: #07090e;               /* Deep midnight obsidian page background */
+    --color-surface-base: #0b0f19;     /* Deep slate for alternating sections & cards */
+    --color-surface-card: #0f172a;     /* Deep space slate cards */
+    --color-surface-hover: #1e293b;    /* Smooth hover fill */
+    --color-surface-elevated: #111827; /* Elevated dialogs / drawers */
 
-    /* Hairline Borders */
-    --color-border-subtle: rgba(0, 0, 0, 0.06);
-    --color-border-default: rgba(0, 0, 0, 0.10);
-    --color-border-active: rgba(0, 68, 255, 0.35);
+    /* Hairline Specular Borders */
+    --color-border-subtle: rgba(255, 255, 255, 0.07);
+    --color-border-default: rgba(255, 255, 255, 0.12);
+    --color-border-active: rgba(56, 189, 248, 0.4);
 
-    /* Text Colors & WCAG AAA Contrast */
-    --color-text-primary: #0a0d14;     /* Crisp obsidian black (19:1 contrast on white) */
-    --color-text-secondary: #475569;   /* Balanced slate (7.5:1 contrast on white) */
-    --color-text-muted: #64748b;       /* Accessible metadata (4.8:1 contrast on white) */
-    --color-accent: var(--color-royal-blue);
-    --color-focus: var(--color-royal-blue);
-    --color-success: #059669;
-    --color-error: #dc2626;
+    /* Text Colors & WCAG AAA Contrast on Dark */
+    --color-text-primary: #f8fafc;     /* Crisp luminescent white (17.5:1 contrast on #07090e) */
+    --color-text-secondary: #94a3b8;   /* Balanced cool slate (7.2:1 contrast) */
+    --color-text-muted: #64748b;       /* Metadata zinc (4.6:1 contrast) */
+    --color-text-light: #ffffff;       /* Pure white */
+    --color-accent: #38bdf8;
+    --color-focus: #38bdf8;
+    --color-success: #10b981;
+    --color-error: #f43f5e;
 
     /* Typography Families */
     --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -129,11 +132,11 @@
     --radius-full: 9999px;
 
     /* Modern Soft Shadows & Subtle Auras */
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 14px -2px rgba(0, 0, 0, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
-    --shadow-lg: 0 16px 36px -6px rgba(0, 0, 0, 0.08), 0 6px 12px -2px rgba(0, 68, 255, 0.04);
-    --shadow-brand-glow: 0 10px 30px -8px rgba(0, 68, 255, 0.35);
-    --shadow-cyan-glow: 0 8px 24px -6px rgba(0, 153, 255, 0.3);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 16px -2px rgba(0, 0, 0, 0.5), 0 2px 6px -1px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 20px 48px -10px rgba(0, 0, 0, 0.7), 0 6px 16px -2px rgba(56, 189, 248, 0.08);
+    --shadow-brand-glow: 0 10px 30px -8px rgba(56, 189, 248, 0.45);
+    --shadow-cyan-glow: 0 8px 28px -6px rgba(6, 182, 212, 0.4);
 
     /* Transitions & Motion */
     --ease-out: cubic-bezier(0.16, 1, 0.3, 1);

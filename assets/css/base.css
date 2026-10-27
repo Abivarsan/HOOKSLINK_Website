@@ -104,7 +104,7 @@
 
   /* Selection highlight */
   ::selection {
-    background: rgba(0, 68, 255, 0.16);
-    color: var(--color-royal-blue);
+    background: rgba(56, 189, 248, 0.28);
+    color: #ffffff;
   }
 }

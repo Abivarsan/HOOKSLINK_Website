@@ -78,3 +78,11 @@ if (contactForm) {
     initContactForm(contactForm);
   });
 }
+
+// 11. Dual-Loop Continuous Water Flow Engine
+const fluidLoops = document.querySelectorAll('[data-fluid-loop]');
+if (fluidLoops.length) {
+  import('./modules/fluid-loop.js').then(({ initFluidLoop }) => {
+    fluidLoops.forEach(el => initFluidLoop(el));
+  });
+}
