@@ -61,6 +61,24 @@
                      radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.08) 0px, transparent 50%),
                      radial-gradient(at 0% 100%, rgba(139, 92, 246, 0.10) 0px, transparent 50%);
 
+    /* Section Thematic Color Palette Gradients (Distinct Atmospheric Zones) */
+    --gradient-section-sapphire: linear-gradient(180deg, #030712 0%, #071329 50%, #061022 100%);
+    --gradient-section-amethyst: linear-gradient(180deg, #061022 0%, #100b24 50%, #150d2c 100%);
+    --gradient-section-emerald:  linear-gradient(180deg, #150d2c 0%, #041b18 50%, #052620 100%);
+    --gradient-section-bronze:   linear-gradient(180deg, #052620 0%, #151216 50%, #1c1620 100%);
+    --gradient-section-indigo:   linear-gradient(180deg, #1c1620 0%, #080d24 50%, #0b1130 100%);
+    --gradient-section-gold:     linear-gradient(180deg, #0b1130 0%, #141108 50%, #1a1508 100%);
+    --gradient-section-climax:   linear-gradient(180deg, #1a1508 0%, #0a0b1c 45%, #05070f 100%);
+
+    /* Atmospheric Ambient Glows */
+    --glow-sapphire: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.12) 0%, rgba(30, 58, 138, 0.08) 45%, transparent 75%);
+    --glow-amethyst: radial-gradient(circle at 50% 40%, rgba(139, 92, 246, 0.14) 0%, rgba(236, 72, 153, 0.06) 50%, transparent 75%);
+    --glow-emerald:  radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.14) 0%, rgba(6, 182, 212, 0.08) 50%, transparent 75%);
+    --glow-bronze:   radial-gradient(circle at 50% 40%, rgba(245, 158, 11, 0.12) 0%, rgba(244, 63, 94, 0.06) 50%, transparent 75%);
+    --glow-indigo:   radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.15) 0%, rgba(56, 189, 248, 0.06) 50%, transparent 75%);
+    --glow-gold:     radial-gradient(circle at 50% 40%, rgba(252, 211, 77, 0.14) 0%, rgba(245, 158, 11, 0.06) 50%, transparent 75%);
+    --glow-climax:   radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.22) 0%, rgba(236, 72, 153, 0.10) 45%, transparent 75%);
+
     /* Modern Dark Glassmorphism System */
     --glass-bg: rgba(15, 23, 42, 0.72);
     --glass-bg-elevated: rgba(15, 23, 42, 0.88);

@@ -751,62 +751,106 @@
   }
 
   /* ==========================================================================
-     6. CTA Band (Option A: High-Contrast Obsidian Anchor)
+     6. CTA Band (Radiant Multi-Stop Conversion Climax)
      ========================================================================== */
   .cta-band {
     position: relative;
-    background: linear-gradient(135deg, #050b14 0%, #0f172a 100%);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.28) 0%, transparent 65%),
+                linear-gradient(135deg, rgba(30, 27, 75, 0.95) 0%, rgba(15, 23, 42, 0.98) 50%, rgba(12, 74, 110, 0.95) 100%);
+    border: 1px solid rgba(56, 189, 248, 0.35);
     border-radius: var(--radius-xl);
     padding: clamp(2.5rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
     text-align: center;
     overflow: hidden;
     color: #ffffff;
-    box-shadow: 0 20px 50px -10px rgba(0, 10, 30, 0.25);
+    box-shadow: 0 0 60px -10px rgba(99, 102, 241, 0.35), 
+                0 25px 60px -12px rgba(0, 0, 0, 0.9), 
+                inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
   }
 
   .cta-band::before {
     content: '';
     position: absolute;
     top: 0;
-    left: 20%;
-    right: 20%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--color-cyan-blue), transparent);
+    left: 15%;
+    right: 15%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #38bdf8 30%, #ec4899 70%, transparent);
   }
 
   .cta-band__title {
     font-size: var(--fs-3xl);
     margin-bottom: 1rem;
     color: #ffffff;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
   }
 
   .cta-band__desc {
     font-size: var(--fs-md);
-    color: #cbd5e1;
+    color: #e2e8f0;
     max-width: 36rem;
     margin-inline: auto;
     margin-bottom: 2rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
   }
 
   .cta-band__actions {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.25rem;
+  }
+
+  .cta-band .btn--primary {
+    background: linear-gradient(135deg, #38bdf8 0%, #6366f1 50%, #ec4899 100%);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 6px 24px rgba(99, 102, 241, 0.5), 0 0 30px rgba(236, 72, 153, 0.35);
+  }
+
+  .cta-band .btn--primary:hover {
+    box-shadow: 0 8px 34px rgba(99, 102, 241, 0.75), 0 0 45px rgba(236, 72, 153, 0.55);
+    transform: translateY(-2px) scale(1.02);
   }
 
   .cta-band .btn--secondary {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.1);
     color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.28);
     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
   }
 
   .cta-band .btn--secondary:hover {
-    background: rgba(255, 255, 255, 0.16);
-    border-color: rgba(255, 255, 255, 0.45);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
     color: #ffffff;
+  }
+
+  /* Section-Harmonized Thematic Card Accents */
+  .section--theme-amethyst .service-card:hover {
+    border-color: rgba(139, 92, 246, 0.5);
+    box-shadow: 0 20px 40px -10px rgba(139, 92, 246, 0.25);
+  }
+
+  .section--theme-emerald .roi-card:hover {
+    border-color: rgba(16, 185, 129, 0.5);
+    box-shadow: 0 20px 40px -10px rgba(16, 185, 129, 0.25);
+  }
+
+  .section--theme-bronze .project-card:hover {
+    border-color: rgba(245, 158, 11, 0.45);
+    box-shadow: 0 20px 40px -10px rgba(245, 158, 11, 0.25);
+  }
+
+  .section--theme-gold .metric-card {
+    border-color: rgba(252, 211, 77, 0.18);
+  }
+
+  .section--theme-gold .metric-card:hover {
+    border-color: rgba(252, 211, 77, 0.5);
+    box-shadow: 0 20px 40px -10px rgba(252, 211, 77, 0.2);
   }
 
   /* ==========================================================================
