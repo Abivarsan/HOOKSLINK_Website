@@ -79,11 +79,11 @@ if (contactForm) {
   });
 }
 
-// 11. Dual-Loop Continuous Water Flow Engine
-const fluidLoops = document.querySelectorAll('[data-fluid-loop]');
-if (fluidLoops.length) {
-  import('./modules/fluid-loop.js').then(({ initFluidLoop }) => {
-    fluidLoops.forEach(el => initFluidLoop(el));
+// 11. 'Zero-Gravity/Antigravity' Quantum Orbit Warp Interactive Background Engine
+const quantumOrbits = document.querySelectorAll('[data-quantum-orbit]');
+if (quantumOrbits.length) {
+  import('./modules/quantum-orbit.js').then(({ initQuantumOrbit }) => {
+    quantumOrbits.forEach(el => initQuantumOrbit(el));
   });
 }
 

@@ -127,14 +127,24 @@
 
   <!-- Main Content Landmark -->
   <main id="main-content">
-    <!-- Hero Section -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero__bg-grid" aria-hidden="true"></div>
-      <div class="glow-orb glow-orb--blue glow-orb--hero-blue" aria-hidden="true"></div>
-      <div class="glow-orb glow-orb--cyan glow-orb--hero-cyan" aria-hidden="true"></div>
+    <!-- Hero Section with 'Zero-Gravity' Quantum Orbit Warp Interactive Background -->
+    <section class="hero hero--quantum" aria-labelledby="hero-title">
+      <div class="hero__quantum-warp" data-quantum-orbit aria-hidden="true">
+        <canvas id="quantum-orbit-canvas" class="hero__quantum-canvas"></canvas>
+        <div class="hero__nebula hero__nebula--cyan"></div>
+        <div class="hero__nebula hero__nebula--indigo"></div>
+        <div class="hero__nebula hero__nebula--gold"></div>
+        <!-- Coordinate Matrix HUD Overlays -->
+        <div class="hero__quantum-hud hero__quantum-hud--bl">
+          <span class="hero__hud-mono">SYS.ORBIT // <span data-coord-lat>51.5074</span>° N, <span data-coord-lng>-0.1278</span>° W [UK_HQ]</span>
+        </div>
+        <div class="hero__quantum-hud hero__quantum-hud--br">
+          <span class="hero__hud-mono">GRAV.VECTOR // ZERO-G [1.000g &rarr; 0.000g]</span>
+        </div>
+      </div>
 
       <div class="container hero__layout">
-        <div class="hero__content" data-reveal>
+        <div class="hero__content hero__content--centered" data-reveal>
           <div class="hero__badge">
             <span class="hero__badge-pulse" aria-hidden="true"></span>
             <span>AI-Powered Creative Agency • UK</span>
@@ -169,88 +179,6 @@
             <p class="hero__proof-text">
               <span class="hero__proof-highlight">16+ Verified Clients</span> partnering with Hookslink to elevate their digital reach and ROI.
             </p>
-          </div>
-        </div>
-
-        <!-- Realistic Interactive Live Agency Growth Hub -->
-        <div class="hero__growth-hub" data-reveal aria-hidden="true">
-          <div class="growth-hub-card">
-            <div class="growth-hub__topbar">
-              <div class="growth-hub__dots" aria-hidden="true">
-                <span class="growth-hub__dot growth-hub__dot--red"></span>
-                <span class="growth-hub__dot growth-hub__dot--amber"></span>
-                <span class="growth-hub__dot growth-hub__dot--green"></span>
-              </div>
-              <div class="growth-hub__status">
-                <span class="growth-hub__pulse" aria-hidden="true"></span>
-                <span>Continuous Fluid Growth Engine • Live UK Network</span>
-              </div>
-            </div>
-
-            <!-- Dual Concentric Water Flow Loop Simulation -->
-            <div class="growth-hub__fluid-wrap" data-fluid-loop>
-              <canvas id="water-loop-canvas" class="growth-hub__canvas" width="460" height="260" ></canvas>
-              <div class="growth-hub__canvas-badges" aria-hidden="true">
-                <span class="fluid-badge fluid-badge--outer">
-                  <span class="fluid-badge__dot"></span>
-                  <span>Primary Circulation</span>
-                </span>
-                <span class="fluid-badge fluid-badge--inner">
-                  <span class="fluid-badge__dot"></span>
-                  <span>Vortex Core</span>
-                </span>
-              </div>
-            </div>
-
-            <div class="growth-hub__metrics">
-              <div class="growth-hub__metric-box">
-                <div class="growth-hub__metric-val text-gradient">4.8x</div>
-                <div class="growth-hub__metric-label">Average Campaign ROAS</div>
-                <div class="growth-hub__badge">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
-                  <span>+142% vs Industry Avg</span>
-                </div>
-              </div>
-              <div class="growth-hub__metric-box">
-                <div class="growth-hub__metric-val text-gradient-cyan">100/100</div>
-                <div class="growth-hub__metric-label">Core Web Vitals Speed</div>
-                <div class="growth-hub__badge">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Sub-Second TTFB</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="growth-hub__channels">
-              <div class="growth-hub__channel-title">Omnichannel Attribution Mix</div>
-              <div class="growth-hub__bar-track" aria-hidden="true">
-                <div class="growth-hub__bar-seg--blue"></div>
-                <div class="growth-hub__bar-seg--coral"></div>
-                <div class="growth-hub__bar-seg--emerald"></div>
-              </div>
-              <div class="growth-hub__legend">
-                <div class="growth-hub__legend-item">
-                  <span class="growth-hub__legend-color bg-indigo-legend" aria-hidden="true"></span>
-                  <span>Google Ads (42%)</span>
-                </div>
-                <div class="growth-hub__legend-item">
-                  <span class="growth-hub__legend-color bg-coral-legend" aria-hidden="true"></span>
-                  <span>Paid Social (34%)</span>
-                </div>
-                <div class="growth-hub__legend-item">
-                  <span class="growth-hub__legend-color bg-emerald-legend" aria-hidden="true"></span>
-                  <span>Organic SEO (24%)</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="growth-hub__live-toast">
-              <div class="growth-hub__toast-avatar" aria-hidden="true">TC</div>
-              <div class="growth-hub__toast-content">
-                <span class="growth-hub__toast-title">New High-Intent Conversion</span>
-                <span class="growth-hub__toast-sub">TAM Chicken • Local Search Campaign (2 mins ago)</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>

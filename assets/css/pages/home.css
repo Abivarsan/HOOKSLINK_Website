@@ -28,17 +28,13 @@
   }
 
   .hero__layout {
-    display: grid;
-    gap: clamp(2.5rem, 6vw, 4rem);
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     position: relative;
-    z-index: 1;
-  }
-
-  @media (min-width: 64rem) { /* 1024px */
-    .hero__layout {
-      grid-template-columns: 1.15fr 0.85fr;
-    }
+    z-index: 10;
+    width: 100%;
   }
 
   .hero__content {
@@ -157,286 +153,138 @@
   }
 
   /* ==========================================================================
-     V4 Realistic Live Agency Growth Hub & Concentric Water Flow Loop
+     'Zero-Gravity' Quantum Orbit Warp Interactive Canvas & HUD
      ========================================================================== */
-  .hero__growth-hub {
+  .hero--quantum {
     position: relative;
-    width: 100%;
-    max-width: 520px;
-    margin-inline: auto;
-    perspective: 1200px;
-  }
-
-  .growth-hub-card {
-    position: relative;
-    background: linear-gradient(145deg, rgba(15, 23, 42, 0.88) 0%, rgba(10, 15, 29, 0.95) 100%);
-    backdrop-filter: blur(28px) saturate(190%);
-    -webkit-backdrop-filter: blur(28px) saturate(190%);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: var(--radius-xl);
-    box-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.8),
-                0 0 32px -8px rgba(6, 182, 212, 0.25),
-                inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    padding: 1.5rem;
+    min-height: calc(100vh - var(--header-height));
+    padding-top: calc(var(--header-height) + clamp(4rem, 9vw, 8rem));
+    padding-bottom: clamp(5rem, 10vw, 8rem);
+    background: #030712;
     overflow: hidden;
-    transition: transform var(--duration-base) var(--ease-out),
-                box-shadow var(--duration-base) var(--ease-out);
   }
 
-  .growth-hub-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 32px 70px -12px rgba(0, 0, 0, 0.9),
-                0 0 40px rgba(6, 182, 212, 0.35);
-  }
-
-  .growth-hub__topbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 0.85rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    margin-bottom: 1.15rem;
-  }
-
-  .growth-hub__dots {
-    display: flex;
-    gap: 6px;
-  }
-
-  .growth-hub__dot {
-    width: 10px;
-    height: 10px;
-    border-radius: var(--radius-full);
-  }
-
-  .growth-hub__dot--red { background: #ef4444; }
-  .growth-hub__dot--amber { background: #f59e0b; }
-  .growth-hub__dot--green { background: #10b981; }
-
-  .growth-hub__status {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.725rem;
-    font-weight: 700;
-    color: #38bdf8;
-    background: rgba(56, 189, 248, 0.1);
-    border: 1px solid rgba(56, 189, 248, 0.25);
-    padding: 0.2rem 0.65rem;
-    border-radius: var(--radius-full);
-  }
-
-  .growth-hub__pulse {
-    width: 6px;
-    height: 6px;
-    background: #38bdf8;
-    border-radius: var(--radius-full);
-    box-shadow: 0 0 8px #38bdf8;
-    animation: hub-pulse 1.8s infinite ease-in-out;
-  }
-
-  @keyframes hub-pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.35; transform: scale(0.8); }
-  }
-
-  /* Water Flow Canvas Container */
-  .growth-hub__fluid-wrap {
-    position: relative;
+  .hero__quantum-warp {
+    position: absolute;
+    inset: 0;
     width: 100%;
-    aspect-ratio: 16/9;
-    border-radius: var(--radius-lg);
-    background: radial-gradient(circle at center, rgba(6, 182, 212, 0.08) 0%, rgba(10, 15, 29, 0.95) 100%);
-    border: 1px solid rgba(56, 189, 248, 0.2);
-    box-shadow: inset 0 2px 14px rgba(0, 0, 0, 0.8), 0 4px 20px rgba(0, 0, 0, 0.5);
+    height: 100%;
+    pointer-events: auto;
+    z-index: 0;
     overflow: hidden;
-    margin-bottom: 1.15rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
-  .growth-hub__canvas {
+  .hero__quantum-canvas {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     display: block;
-    cursor: crosshair;
   }
 
-  .growth-hub__canvas-badges {
+  /* Ambient Glow Nebulae */
+  .hero__nebula {
     position: absolute;
-    inset: 0.65rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    border-radius: var(--radius-full);
+    filter: blur(80px);
     pointer-events: none;
+    mix-blend-mode: screen;
+    opacity: 0.45;
   }
 
-  .fluid-badge {
-    padding: 0.2rem 0.55rem;
+  .hero__nebula--cyan {
+    top: 20%;
+    left: 25%;
+    width: clamp(260px, 35vw, 440px);
+    height: clamp(260px, 35vw, 440px);
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.28) 0%, transparent 70%);
+  }
+
+  .hero__nebula--indigo {
+    top: 28%;
+    right: 20%;
+    width: clamp(280px, 40vw, 500px);
+    height: clamp(280px, 40vw, 500px);
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.24) 0%, transparent 70%);
+  }
+
+  .hero__nebula--gold {
+    bottom: 22%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: clamp(240px, 32vw, 420px);
+    height: clamp(140px, 18vw, 240px);
+    background: radial-gradient(ellipse, rgba(252, 211, 77, 0.16) 0%, transparent 70%);
+  }
+
+  /* Interactive Coordinate Matrix HUD */
+  .hero__quantum-hud {
+    position: absolute;
+    pointer-events: none;
+    z-index: 5;
+    padding: 0.5rem 0.85rem;
+    background: rgba(15, 23, 42, 0.55);
+    border: 1px solid rgba(56, 189, 248, 0.25);
     border-radius: var(--radius-full);
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
   }
 
-  .fluid-badge--outer {
-    background: rgba(15, 23, 42, 0.8);
-    border: 1px solid rgba(56, 189, 248, 0.3);
-    color: #38bdf8;
+  .hero__quantum-hud--bl {
+    bottom: clamp(1.5rem, 3vw, 2.5rem);
+    left: clamp(1.5rem, 3.5vw, 3rem);
   }
 
-  .fluid-badge--inner {
-    background: rgba(15, 23, 42, 0.8);
-    border: 1px solid rgba(99, 102, 241, 0.3);
-    color: #a5b4fc;
+  .hero__quantum-hud--br {
+    bottom: clamp(1.5rem, 3vw, 2.5rem);
+    right: clamp(1.5rem, 3.5vw, 3rem);
   }
 
-  .fluid-badge__dot {
-    width: 5px;
-    height: 5px;
-    border-radius: var(--radius-full);
-    background: currentColor;
-    box-shadow: 0 0 6px currentColor;
-  }
-
-  .growth-hub__metrics {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    margin-bottom: 1.15rem;
-  }
-
-  .growth-hub__metric-box {
-    background: rgba(15, 23, 42, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: var(--radius-md);
-    padding: 1rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  }
-
-  .growth-hub__metric-val {
-    font-family: var(--font-heading);
-    font-size: 1.65rem;
-    font-weight: 800;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-    margin-bottom: 0.25rem;
-  }
-
-  .growth-hub__metric-label {
-    font-size: 0.75rem;
-    color: var(--color-text-secondary);
-    font-weight: 500;
-  }
-
-  .growth-hub__badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.25rem;
-    font-size: 0.7rem;
-    font-weight: 700;
-    color: #10b981;
-    margin-top: 0.35rem;
-  }
-
-  .growth-hub__channels {
-    background: rgba(15, 23, 42, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: var(--radius-md);
-    padding: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .growth-hub__channel-title {
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--color-text-muted);
-    margin-bottom: 0.65rem;
-  }
-
-  .growth-hub__bar-track {
-    display: flex;
-    height: 8px;
-    border-radius: var(--radius-full);
-    overflow: hidden;
-    gap: 2px;
-    margin-bottom: 0.75rem;
-  }
-
-  .growth-hub__bar-seg--blue { width: 42%; background: linear-gradient(90deg, #38bdf8, #6366f1); }
-  .growth-hub__bar-seg--coral { width: 34%; background: linear-gradient(90deg, #f43f5e, #ec4899); }
-  .growth-hub__bar-seg--emerald { width: 24%; background: linear-gradient(90deg, #059669, #10b981); }
-
-  .growth-hub__legend {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.7rem;
-    color: var(--color-text-secondary);
-  }
-
-  .growth-hub__legend-item {
-    display: flex;
-    align-items: center;
-    gap: 0.35rem;
-  }
-
-  .growth-hub__legend-color {
-    width: 8px;
-    height: 8px;
-    border-radius: 2px;
-  }
-
-  .growth-hub__live-toast {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    background: rgba(15, 23, 42, 0.85);
-    border: 1px solid rgba(56, 189, 248, 0.25);
-    border-radius: var(--radius-md);
-    padding: 0.75rem 1rem;
-    box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.6), 0 0 16px rgba(56, 189, 248, 0.1);
-  }
-
-  .growth-hub__toast-avatar {
-    width: 32px;
-    height: 32px;
-    border-radius: var(--radius-full);
-    background: var(--gradient-brand);
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.75rem;
-    font-weight: 700;
-    flex-shrink: 0;
-  }
-
-  .growth-hub__toast-content {
-    display: flex;
-    flex-direction: column;
-    font-size: 0.75rem;
-  }
-
-  .growth-hub__toast-title {
+  .hero__hud-mono {
+    font-family: monospace;
+    font-size: 0.725rem;
     font-weight: 600;
-    color: var(--color-text-primary);
+    letter-spacing: 0.08em;
+    color: rgba(147, 197, 253, 0.85);
   }
 
-  .growth-hub__toast-sub {
-    color: var(--color-text-muted);
-    font-size: 0.7rem;
+  @media (max-width: 48rem) {
+    .hero__quantum-hud--br {
+      display: none;
+    }
   }
 
-  /* Platforms Section */
+  /* Centered Hero Content Over Cosmic Nexus */
+  .hero__content--centered {
+    align-items: center;
+    text-align: center;
+    max-width: 52rem;
+    margin-inline: auto;
+  }
+
+  .hero__content--centered .hero__title {
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.9);
+  }
+
+  .hero__content--centered .hero__lead {
+    margin-inline: auto;
+    max-width: 42rem;
+    color: #cbd5e1;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.8);
+  }
+
+  .hero__content--centered .hero__actions {
+    justify-content: center;
+  }
+
+  .hero__content--centered .hero__proof-cluster {
+    justify-content: center;
+    margin-inline: auto;
+  }
+
+
+    /* Platforms Section */
   .platform-card {
     background: rgba(15, 23, 42, 0.75);
     border: 1px solid rgba(255, 255, 255, 0.08);
