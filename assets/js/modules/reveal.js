@@ -1,5 +1,6 @@
 /**
  * HOOKSLINK - Scroll Reveal Module
+ * Progressive enhancement for smooth entrance animations
  */
 
 import { prefersReducedMotion } from '../utils/motion.js';
@@ -11,6 +12,14 @@ export function initReveal(elements) {
     elements.forEach((el) => el.classList.add('is-visible'));
     return;
   }
+
+  // Instantly reveal elements already visible in initial viewport (e.g. Hero section)
+  elements.forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.add('is-visible');
+    }
+  });
 
   const observer = new IntersectionObserver(
     (entries, obs) => {
@@ -27,5 +36,9 @@ export function initReveal(elements) {
     }
   );
 
-  elements.forEach((el) => observer.observe(el));
+  elements.forEach((el) => {
+    if (!el.classList.contains('is-visible')) {
+      observer.observe(el);
+    }
+  });
 }

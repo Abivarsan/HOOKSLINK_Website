@@ -211,6 +211,10 @@ export function initFluidLoop(container) {
       return;
     }
 
+    if (width <= 0 || height <= 0) {
+      resizeCanvas();
+    }
+
     ctx.save();
     ctx.scale(dpr, dpr);
     ctx.clearRect(0, 0, width, height);
