@@ -1790,4 +1790,212 @@
     filter: brightness(1) invert(0) opacity(100%);
   }
 
+
+  /* ==========================================================================
+     3D Cylindrical Infinite Ribbon Carousel (Client Partner Ticker)
+     ========================================================================== */
+  .section--cylinder-ticker {
+    position: relative;
+    padding-block: clamp(3.5rem, 7vw, 6rem);
+    overflow: hidden;
+    background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.08) 0%, rgba(7, 9, 14, 0.95) 75%);
+  }
+
+  .cylinder-ticker {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin-inline: auto;
+    height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+  }
+
+  .cylinder-ticker__scene {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1100px;
+    perspective-origin: 50% 40%;
+  }
+
+  .cylinder-ticker__ring {
+    --cylinder-radius: 300px;
+    --card-width: 145px;
+    --card-height: 95px;
+    position: relative;
+    width: var(--card-width);
+    height: var(--card-height);
+    transform-style: preserve-3d;
+    transform: rotateX(-10deg) rotateY(0deg);
+    cursor: grab;
+    user-select: none;
+    touch-action: pan-y;
+  }
+
+  .cylinder-ticker__ring.is-dragging {
+    cursor: grabbing;
+  }
+
+  /* Translucent cylindrical ribbon band encircling the loop */
+  .cylinder-ticker__ribbon-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(var(--cylinder-radius) * 2 + var(--card-width) + 10px);
+    height: calc(var(--cylinder-radius) * 2 + var(--card-width) + 10px);
+    margin-top: calc((var(--cylinder-radius) * 2 + var(--card-width) + 10px) / -2);
+    margin-left: calc((var(--cylinder-radius) * 2 + var(--card-width) + 10px) / -2);
+    border-radius: var(--radius-full);
+    border: 1.5px solid rgba(56, 189, 248, 0.25);
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.05) 0%, transparent 70%);
+    box-shadow: 0 0 35px rgba(56, 189, 248, 0.2), inset 0 0 25px rgba(56, 189, 248, 0.1);
+    transform: rotateX(80deg);
+    pointer-events: none;
+  }
+
+  /* Individual 3D Client Logo Card */
+  
+  /* 3D Ring Card Angular Distribution (Zero Inline Styles) */
+  .cylinder-card[data-index="0"] { --i: 0; }
+  .cylinder-card[data-index="1"] { --i: 1; }
+  .cylinder-card[data-index="2"] { --i: 2; }
+  .cylinder-card[data-index="3"] { --i: 3; }
+  .cylinder-card[data-index="4"] { --i: 4; }
+  .cylinder-card[data-index="5"] { --i: 5; }
+  .cylinder-card[data-index="6"] { --i: 6; }
+  .cylinder-card[data-index="7"] { --i: 7; }
+  .cylinder-card[data-index="8"] { --i: 8; }
+  .cylinder-card[data-index="9"] { --i: 9; }
+
+  .cylinder-card {
+    position: absolute;
+    inset: 0;
+    width: var(--card-width);
+    height: var(--card-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 1.15rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    box-shadow: 0 12px 30px -4px rgba(0, 0, 0, 0.5), 
+                0 0 18px -2px rgba(56, 189, 248, 0.3),
+                inset 0 1px 1px #ffffff;
+    transform: rotateY(calc(var(--i) * 36deg)) translateZ(var(--cylinder-radius));
+    transition: transform var(--duration-fast) var(--ease-out), 
+                box-shadow var(--duration-fast) var(--ease-out),
+                border-color var(--duration-fast);
+    cursor: pointer;
+  }
+
+  .cylinder-card:hover {
+    box-shadow: 0 18px 40px -4px rgba(0, 0, 0, 0.65), 
+                0 0 32px rgba(56, 189, 248, 0.6),
+                inset 0 1px 1px #ffffff;
+    border-color: #38bdf8;
+    transform: rotateY(calc(var(--i) * 36deg)) translateZ(calc(var(--cylinder-radius) + 18px)) scale(1.08);
+    z-index: 100;
+  }
+
+  .cylinder-card__logo {
+    max-height: 48px;
+    max-width: 125px;
+    width: auto;
+    object-fit: contain;
+    filter: none;
+    transition: transform var(--duration-fast) var(--ease-out);
+  }
+
+  .cylinder-card:hover .cylinder-card__logo {
+    transform: scale(1.06);
+  }
+
+  /* Orbital Glow Arrow Streams */
+  .cylinder-ticker__orbit-stream {
+    position: absolute;
+    width: clamp(320px, 60vw, 540px);
+    height: 45px;
+    pointer-events: none;
+    z-index: 20;
+  }
+
+  .cylinder-ticker__orbit-stream--top {
+    top: 15px;
+    filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.85));
+    animation: pulse-stream 2.4s ease-in-out infinite;
+  }
+
+  .cylinder-ticker__orbit-stream--bottom {
+    bottom: 15px;
+    filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.85));
+    animation: pulse-stream 2.4s ease-in-out infinite reverse;
+  }
+
+  .cylinder-ticker__arrow-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: visible;
+  }
+
+  @keyframes pulse-stream {
+    0%, 100% {
+      opacity: 0.95;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.65;
+      transform: scale(0.98);
+    }
+  }
+
+  /* Responsive 3D Cylindrical Scaling */
+  @media (max-width: 63.99rem) {
+    .cylinder-ticker {
+      height: 300px;
+    }
+    .cylinder-ticker__ring {
+      --cylinder-radius: 250px;
+      --card-width: 130px;
+      --card-height: 85px;
+    }
+    .cylinder-card__logo {
+      max-height: 42px;
+      max-width: 110px;
+    }
+  }
+
+  @media (max-width: 39.99rem) {
+    .cylinder-ticker {
+      height: 260px;
+    }
+    .cylinder-ticker__ring {
+      --cylinder-radius: 185px;
+      --card-width: 105px;
+      --card-height: 72px;
+    }
+    .cylinder-card {
+      padding: 0.5rem 0.75rem;
+      border-radius: 14px;
+    }
+    .cylinder-card__logo {
+      max-height: 34px;
+      max-width: 90px;
+    }
+    .cylinder-ticker__orbit-stream--top {
+      top: 5px;
+    }
+    .cylinder-ticker__orbit-stream--bottom {
+      bottom: 5px;
+    }
+  }
+
 }

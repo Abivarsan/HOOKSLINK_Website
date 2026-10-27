@@ -256,88 +256,85 @@
       </div>
     </section>
 
-    <!-- Trusted By / 10-Client Dual Kinetic Showcase Section -->
-    <section class="section section--bordered section--alt" aria-label="Trusted Clients and Commercial Partners">
-      <div class="container text-center mb-8">
+    <!-- Trusted By / 3D Cylindrical Infinite Ribbon Carousel -->
+    <section class="section section--bordered section--alt section--cylinder-ticker" aria-label="Trusted Clients and Commercial Partners">
+      <div class="container text-center mb-6">
         <span class="section-header__tag">Trusted By Forward-Thinking UK Brands</span>
-        <h2 class="text-xl font-bold mt-2 ">Proven Partnerships Across Retail, Logistics &amp; Enterprise</h2>
+        <h2 class="text-xl font-bold mt-2">Proven Partnerships Across Retail, Logistics &amp; Enterprise</h2>
+        <p class="section-header__desc max-w-xl mx-auto mt-2 text-sm">
+          Interactive 3D client network. Hover to pause or drag to explore our partner brands.
+        </p>
       </div>
 
-      <div class="marquee--dual">
-        <!-- Track 1 (Gliding Left) -->
-        <div class="marquee">
-          <div class="marquee__inner">
-            <div class="client-card">
-              <img src="/assets/images/clients/vextroo-group.webp" alt="Vextroo Group Construction" class="client-card__logo" width="160" height="44" loading="lazy">
-            </div>
-            <div class="client-card">
-              <img src="/assets/images/clients/jumpgolocal.webp" alt="Jumpgolocal Retail" class="client-card__logo" width="160" height="44" loading="lazy">
-            </div>
-            <div class="client-card">
-              <img src="/assets/images/clients/tam-chicken.webp" alt="TAM Chicken Restaurants" class="client-card__logo" width="140" height="44" loading="lazy">
-            </div>
-            <div class="client-card">
-              <img src="/assets/images/clients/ambush-street-minimarket.webp" alt="Ambush Street Minimarket" class="client-card__logo" width="60" height="44" loading="lazy">
-            </div>
-            <div class="client-card">
-              <img src="/assets/images/clients/agnes-road.webp" alt="Agnes Road Properties" class="client-card__logo" width="140" height="44" loading="lazy">
-            </div>
+      <div class="cylinder-ticker" data-cylinder-ticker>
+        <!-- Top Orbit Stream with Glow Arrow -->
+        <div class="cylinder-ticker__orbit-stream cylinder-ticker__orbit-stream--top" aria-hidden="true">
+          <svg class="cylinder-ticker__arrow-svg" viewBox="0 0 500 40" fill="none">
+            <path d="M 50 20 Q 250 35 450 20" stroke="url(#orbit-grad-top)" stroke-width="2.5" stroke-linecap="round"/>
+            <polygon points="450,20 438,14 441,20 438,26" fill="#38bdf8"/>
+            <defs>
+              <linearGradient id="orbit-grad-top" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#38bdf8" stop-opacity="0"/>
+                <stop offset="60%" stop-color="#38bdf8" stop-opacity="0.8"/>
+                <stop offset="100%" stop-color="#38bdf8" stop-opacity="1"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
 
-            <!-- Loop 1 duplicates -->
-            <div class="client-card" aria-hidden="true">
-              <img src="/assets/images/clients/vextroo-group.webp" alt="" class="client-card__logo" width="160" height="44" loading="lazy">
+        <!-- 3D Scene Viewport -->
+        <div class="cylinder-ticker__scene">
+          <!-- Translucent glass ribbon ring in 3D perspective -->
+          <div class="cylinder-ticker__ribbon-ring" aria-hidden="true"></div>
+
+          <!-- Cylindrical Frosted Glass Ring with 10 Partner Cards -->
+          <div class="cylinder-ticker__ring">
+            <div class="cylinder-card" data-index="0" title="Vextroo Group - Construction &amp; Development">
+              <img src="/assets/images/clients/vextroo-group.webp" alt="Vextroo Group Construction" class="cylinder-card__logo" width="140" height="42" loading="lazy">
             </div>
-            <div class="client-card" aria-hidden="true">
-              <img src="/assets/images/clients/jumpgolocal.webp" alt="" class="client-card__logo" width="160" height="44" loading="lazy">
+            <div class="cylinder-card" data-index="1" title="Jumpgolocal - Retail Convenience">
+              <img src="/assets/images/clients/jumpgolocal.webp" alt="Jumpgolocal Retail" class="cylinder-card__logo" width="140" height="42" loading="lazy">
             </div>
-            <div class="client-card" aria-hidden="true">
-              <img src="/assets/images/clients/tam-chicken.webp" alt="" class="client-card__logo" width="140" height="44" loading="lazy">
+            <div class="cylinder-card" data-index="2" title="TAM Chicken - Restaurant Hospitality">
+              <img src="/assets/images/clients/tam-chicken.webp" alt="TAM Chicken Restaurants" class="cylinder-card__logo" width="130" height="42" loading="lazy">
             </div>
-            <div class="client-card" aria-hidden="true">
-              <img src="/assets/images/clients/ambush-street-minimarket.webp" alt="" class="client-card__logo" width="60" height="44" loading="lazy">
+            <div class="cylinder-card" data-index="3" title="Ambush Street Minimarket - Retail Supermarket">
+              <img src="/assets/images/clients/ambush-street-minimarket.webp" alt="Ambush Street Minimarket" class="cylinder-card__logo" width="70" height="42" loading="lazy">
             </div>
-            <div class="client-card" aria-hidden="true">
-              <img src="/assets/images/clients/agnes-road.webp" alt="" class="client-card__logo" width="140" height="44" loading="lazy">
+            <div class="cylinder-card" data-index="4" title="Agnes Road - Property Portfolio">
+              <img src="/assets/images/clients/agnes-road.webp" alt="Agnes Road Properties" class="cylinder-card__logo" width="130" height="42" loading="lazy">
+            </div>
+            <div class="cylinder-card" data-index="5" title="SK &amp; Transport - Logistics &amp; Haulage">
+              <img src="/assets/images/clients/sk-family-transport.webp" alt="SK &amp; Transport Logistics" class="cylinder-card__logo" width="140" height="42" loading="lazy">
+            </div>
+            <div class="cylinder-card" data-index="6" title="Rasi's Go Local - Grocery Retail">
+              <img src="/assets/images/clients/rasis-go-local.webp" alt="Rasi's Go Local Store" class="cylinder-card__logo" width="140" height="42" loading="lazy">
+            </div>
+            <div class="cylinder-card" data-index="7" title="Everstar Maintenance - Commercial Facilities">
+              <img src="/assets/images/clients/everstar-maintenance.webp" alt="Everstar Maintenance Facilities" class="cylinder-card__logo" width="140" height="42" loading="lazy">
+            </div>
+            <div class="cylinder-card" data-index="8" title="St James Superstore - Supermarket Retail">
+              <img src="/assets/images/clients/st-james-superstore.webp" alt="St James Superstore" class="cylinder-card__logo" width="140" height="42" loading="lazy">
+            </div>
+            <div class="cylinder-card" data-index="9" title="Holbeach Drove Store &amp; Filling Station - Fuel &amp; Convenience">
+              <img src="/assets/images/clients/holbeach-drove-store.webp" alt="Holbeach Drove Store &amp; Filling Station" class="cylinder-card__logo" width="115" height="42" loading="lazy">
             </div>
           </div>
         </div>
 
-        <!-- Track 2 (Gliding Right) -->
-        <div class="marquee">
-          <div class="marquee__inner marquee__inner--rev">
-            <div class="client-card">
-              <img src="/assets/images/clients/sk-family-transport.webp" alt="SK &amp; Transport Logistics" class="client-card__logo" width="150" height="44" loading="lazy">
-            </div>
-            <div class="client-card">
-              <img src="/assets/images/clients/rasis-go-local.webp" alt="Rasi's Go Local Store" class="client-card__logo" width="160" height="44" loading="lazy">
-            </div>
-            <div class="client-card">
-              <img src="/assets/images/clients/everstar-maintenance.webp" alt="Everstar Maintenance Facilities" class="client-card__logo" width="150" height="44" loading="lazy">
-            </div>
-            <div class="client-card">
-              <img src="/assets/images/clients/st-james-superstore.webp" alt="St James Superstore" class="client-card__logo" width="160" height="44" loading="lazy">
-            </div>
-            <div class="client-card">
-              <img src="/assets/images/clients/holbeach-drove-store.webp" alt="Holbeach Drove Store &amp; Filling Station" class="client-card__logo" width="120" height="44" loading="lazy">
-            </div>
-
-            <!-- Loop 2 duplicates -->
-            <div class="client-card" aria-hidden="true">
-              <img src="/assets/images/clients/sk-family-transport.webp" alt="" class="client-card__logo" width="150" height="44" loading="lazy">
-            </div>
-            <div class="client-card" aria-hidden="true">
-              <img src="/assets/images/clients/rasis-go-local.webp" alt="" class="client-card__logo" width="160" height="44" loading="lazy">
-            </div>
-            <div class="client-card" aria-hidden="true">
-              <img src="/assets/images/clients/everstar-maintenance.webp" alt="" class="client-card__logo" width="150" height="44" loading="lazy">
-            </div>
-            <div class="client-card" aria-hidden="true">
-              <img src="/assets/images/clients/st-james-superstore.webp" alt="" class="client-card__logo" width="160" height="44" loading="lazy">
-            </div>
-            <div class="client-card" aria-hidden="true">
-              <img src="/assets/images/clients/holbeach-drove-store.webp" alt="" class="client-card__logo" width="120" height="44" loading="lazy">
-            </div>
-          </div>
+        <!-- Bottom Orbit Stream with Reverse Glow Arrow -->
+        <div class="cylinder-ticker__orbit-stream cylinder-ticker__orbit-stream--bottom" aria-hidden="true">
+          <svg class="cylinder-ticker__arrow-svg" viewBox="0 0 500 40" fill="none">
+            <path d="M 450 20 Q 250 5 50 20" stroke="url(#orbit-grad-bottom)" stroke-width="2.5" stroke-linecap="round"/>
+            <polygon points="50,20 62,14 59,20 62,26" fill="#38bdf8"/>
+            <defs>
+              <linearGradient id="orbit-grad-bottom" x1="100%" y1="0%" x2="0%" y2="0%">
+                <stop offset="0%" stop-color="#38bdf8" stop-opacity="0"/>
+                <stop offset="60%" stop-color="#38bdf8" stop-opacity="0.8"/>
+                <stop offset="100%" stop-color="#38bdf8" stop-opacity="1"/>
+              </linearGradient>
+            </defs>
+          </svg>
         </div>
       </div>
     </section>

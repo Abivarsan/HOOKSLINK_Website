@@ -86,3 +86,11 @@ if (fluidLoops.length) {
     fluidLoops.forEach(el => initFluidLoop(el));
   });
 }
+
+// 12. 3D Cylindrical Ribbon Infinite Ticker
+const cylinderTickers = document.querySelectorAll('[data-cylinder-ticker]');
+if (cylinderTickers.length) {
+  import('./modules/cylinder-ticker.js').then(({ initCylinderTicker }) => {
+    cylinderTickers.forEach(el => initCylinderTicker(el));
+  });
+}
