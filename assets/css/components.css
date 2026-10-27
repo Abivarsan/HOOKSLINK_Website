@@ -697,45 +697,50 @@
       left: 10%;
       right: 10%;
       height: 2px;
-      background: linear-gradient(90deg, #0044ff, #0099ff);
+      background: linear-gradient(90deg, #38bdf8, #6366f1);
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
       z-index: 1;
     }
   }
 
   .timeline__step {
     position: relative;
-    background: #ffffff;
-    border: 1px solid var(--color-border-subtle);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-sm);
+    background: linear-gradient(145deg, rgba(15, 23, 42, 0.85) 0%, rgba(10, 15, 29, 0.95) 100%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
     padding: 1.75rem;
     display: flex;
     flex-direction: column;
     z-index: 2;
-    transition: border-color var(--duration-base), transform var(--duration-base), box-shadow var(--duration-base);
+    transition: border-color var(--duration-base) var(--ease-out), 
+                transform var(--duration-base) var(--ease-out), 
+                box-shadow var(--duration-base) var(--ease-out);
   }
 
   .timeline__step:hover {
-    border-color: var(--color-border-active);
+    border-color: rgba(56, 189, 248, 0.45);
     transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 18px 40px -4px rgba(0, 0, 0, 0.7), 0 0 24px -4px rgba(56, 189, 248, 0.25);
   }
 
   .timeline__phase-badge {
     width: 44px;
     height: 44px;
     border-radius: var(--radius-full);
-    background: var(--color-blue-tint);
-    border: 2px solid var(--color-royal-blue);
+    background: rgba(56, 189, 248, 0.12);
+    border: 2px solid #38bdf8;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: var(--font-heading);
     font-weight: 800;
     font-size: var(--fs-md);
-    color: var(--color-royal-blue);
+    color: #38bdf8;
     margin-bottom: 1.25rem;
-    box-shadow: 0 4px 12px rgba(0, 68, 255, 0.15);
+    box-shadow: 0 0 16px rgba(56, 189, 248, 0.35);
   }
 
   .timeline__title {
