@@ -1,5 +1,5 @@
 /* ==========================================================================
-   HOOKSLINK - Utilities & Animation Helpers (Modern Light Theme)
+   HOOKSLINK - Utilities & Animation Helpers (Navy & Champagne Cream Palette)
    ========================================================================== */
 
 @layer utilities {
@@ -18,14 +18,14 @@
 
   /* Typography Utilities */
   .text-gradient {
-    background: var(--gradient-brand);
+    background: linear-gradient(135deg, #ffffff 0%, #fcf1d0 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
   }
 
   .text-gradient-cyan {
-    background: linear-gradient(135deg, var(--color-royal-blue) 0%, var(--color-cyan-blue) 100%);
+    background: linear-gradient(135deg, #fcf1d0 0%, #ffffff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
@@ -39,8 +39,8 @@
   .text-secondary { color: var(--color-text-secondary); }
   .text-white { color: #ffffff; }
   .text-dark { color: var(--color-text-primary); }
-  .text-royal { color: var(--color-royal-blue); }
-  .text-cyan { color: var(--color-cyan-blue); }
+  .text-royal { color: #fcf1d0; }
+  .text-cyan { color: #fcf1d0; }
 
   /* Width & Alignment helpers */
   .mx-auto { margin-inline: auto; }
@@ -77,21 +77,21 @@
 
   /* Glass Surface */
   .glass {
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(13, 28, 66, 0.82);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(252, 241, 208, 0.18);
     box-shadow: var(--shadow-sm);
   }
 
   /* Legal Card Style */
   .legal-card {
-    background: linear-gradient(145deg, rgba(15, 23, 42, 0.85) 0%, rgba(10, 15, 29, 0.95) 100%);
+    background: linear-gradient(145deg, rgba(13, 28, 66, 0.92) 0%, rgba(34, 57, 111, 0.55) 100%);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(252, 241, 208, 0.18);
     border-radius: var(--radius-xl);
-    box-shadow: 0 12px 36px -4px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    box-shadow: 0 12px 36px -4px rgba(1, 7, 54, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.12);
     padding: clamp(1.75rem, 4vw, 3rem);
     line-height: 1.7;
     display: flex;
@@ -148,19 +148,20 @@
     filter: blur(110px);
     pointer-events: none;
     z-index: 0;
-    opacity: 0.16;
+    opacity: 0.22;
   }
 
   .glow-orb--blue {
-    background: #0044ff;
+    background: #22396f;
     width: clamp(280px, 40vw, 550px);
     height: clamp(280px, 40vw, 550px);
   }
 
   .glow-orb--cyan {
-    background: #0099ff;
+    background: #fcf1d0;
     width: clamp(220px, 30vw, 420px);
     height: clamp(220px, 30vw, 420px);
+    opacity: 0.14;
   }
 
   /* Orb positions */
@@ -172,8 +173,7 @@
   .glow-orb--404-blue { top: 25%; left: 35%; }
 
   /* Legend and Badge utility colors (CSP compliant without inline styles) */
-  .bg-indigo-legend { background: #4f46e5; }
-  .bg-coral-legend { background: #f43f5e; }
-  .bg-emerald-legend { background: #10b981; }
-
+  .bg-indigo-legend { background: #22396f; }
+  .bg-coral-legend { background: #fcf1d0; }
+  .bg-emerald-legend { background: #ffffff; }
 }

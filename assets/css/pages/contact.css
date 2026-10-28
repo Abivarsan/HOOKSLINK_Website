@@ -1,5 +1,6 @@
 /* ==========================================================================
-   HOOKSLINK - Contact Page Styles (Modern Light Theme)
+   HOOKSLINK - Contact Page Styles (Navy & Champagne Cream Palette)
+   Palette: #010736 | #0D1C42 | #22396F | #FCF1D0 | #FFFFFF
    ========================================================================== */
 
 @layer pages {
@@ -22,9 +23,8 @@
   }
 
   .contact-info-card {
-    background: linear-gradient(145deg, rgba(15, 23, 42, 0.85) 0%, rgba(10, 15, 29, 0.95) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border: 1px solid var(--color-border-subtle);
+    background: linear-gradient(145deg, #0d1c42 0%, rgba(34, 57, 111, 0.55) 100%);
+    border: 1px solid rgba(252, 241, 208, 0.18);
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-sm);
     padding: clamp(1.75rem, 4vw, 2.5rem);
@@ -43,9 +43,9 @@
     width: 46px;
     height: 46px;
     border-radius: var(--radius-md);
-    background: var(--color-blue-tint);
-    border: 1px solid rgba(0, 68, 255, 0.18);
-    color: var(--color-royal-blue);
+    background: rgba(34, 57, 111, 0.65);
+    border: 1px solid rgba(252, 241, 208, 0.28);
+    color: #fcf1d0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,13 +69,12 @@
   }
 
   .contact-method__value:hover {
-    color: var(--color-royal-blue);
+    color: #fcf1d0;
   }
 
   .contact-form-card {
-    background: linear-gradient(145deg, rgba(15, 23, 42, 0.88) 0%, rgba(10, 15, 29, 0.98) 100%);
-    border: 1px solid rgba(56, 189, 248, 0.2);
-    border: 1px solid var(--color-border-subtle);
+    background: linear-gradient(145deg, #0d1c42 0%, rgba(34, 57, 111, 0.55) 100%);
+    border: 1px solid rgba(252, 241, 208, 0.25);
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-sm);
     padding: clamp(2rem, 4vw, 3rem);

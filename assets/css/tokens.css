@@ -1,5 +1,6 @@
 /* ==========================================================================
-   HOOKSLINK - Design Tokens & Cascade Layers (Modern Obsidian & Cyan Theme)
+   HOOKSLINK - Design Tokens & Cascade Layers (Navy & Champagne Cream Palette)
+   Palette: #010736 | #0D1C42 | #22396F | #FCF1D0 | #FFFFFF
    ========================================================================== */
 
 @layer tokens, reset, base, layout, components, pages, utilities;
@@ -25,72 +26,78 @@
   }
 
   :root {
-    /* Brand Color Architecture - Modern Obsidian & Cyan/Indigo Luxury Dark System */
-    --color-black: #05070c;            /* Absolute deepest black */
-    --color-white: #ffffff;            /* Pure white */
-    --color-royal-blue: #38bdf8;       /* Luminescent cyan-blue (WCAG AAA on dark) */
-    --color-indigo: #6366f1;           /* Electric indigo brand primary */
-    --color-cyan-blue: #06b6d4;        /* Vibrant cyber cyan accent */
-    --color-violet: #8b5cf6;           /* Creative vivid violet */
-    --color-magenta: #ec4899;          /* High-impact magenta */
-    --color-coral: #f43f5e;            /* Sunset coral / high conversion */
-    --color-amber: #f59e0b;            /* Warm amber gold */
-    --color-emerald: #10b981;          /* Growth emerald mint */
+    /* Core 5-Color Brand Architecture */
+    --color-midnight-navy: #010736;    /* rgb(1, 7, 54) - Deepest Midnight Navy */
+    --color-oxford-navy: #0d1c42;      /* rgb(13, 28, 66) - Rich Oxford Navy */
+    --color-royal-slate: #22396f;      /* rgb(34, 57, 111) - Royal Slate Blue */
+    --color-champagne: #fcf1d0;        /* rgb(252, 241, 208) - Warm Champagne Cream */
+    --color-white: #ffffff;            /* rgb(255, 255, 255) - Pure White */
 
-    --color-royal-blue-rgb: 56, 189, 248;
-    --color-indigo-rgb: 99, 102, 241;
-    --color-cyan-blue-rgb: 6, 182, 212;
-    --color-violet-rgb: 139, 92, 246;
-    --color-coral-rgb: 244, 63, 94;
-    --color-emerald-rgb: 16, 185, 129;
+    /* Semantic Aliases Mapped Strictly to the 5-Color Palette */
+    --color-black: #010736;
+    --color-royal-blue: #fcf1d0;       /* Primary brand highlight (17.3:1 AAA contrast on #010736) */
+    --color-indigo: #22396f;           /* Royal Slate Blue secondary brand tone */
+    --color-cyan-blue: #fcf1d0;        /* Warm Champagne Cream luminous accent */
+    --color-violet: #22396f;
+    --color-magenta: #fcf1d0;
+    --color-coral: #fcf1d0;
+    --color-amber: #fcf1d0;
+    --color-emerald: #fcf1d0;
 
-    --color-blue-tint: rgba(56, 189, 248, 0.08);       /* Soft cyan glow fill */
-    --color-blue-tint-hover: rgba(56, 189, 248, 0.16); /* Hover state */
+    --color-royal-blue-rgb: 252, 241, 208;
+    --color-indigo-rgb: 34, 57, 111;
+    --color-cyan-blue-rgb: 252, 241, 208;
+    --color-violet-rgb: 34, 57, 111;
+    --color-coral-rgb: 252, 241, 208;
+    --color-emerald-rgb: 252, 241, 208;
 
-    /* Brand Gradients & Vibrant Dynamic Mesh */
-    --gradient-brand: linear-gradient(135deg, #38bdf8 0%, #6366f1 100%);
-    --gradient-creative: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
-    --gradient-growth: linear-gradient(135deg, #059669 0%, #10b981 50%, #06b6d4 100%);
-    --gradient-energy: linear-gradient(135deg, #f43f5e 0%, #f59e0b 100%);
-    --gradient-fluid: linear-gradient(135deg, #0284c7 0%, #06b6d4 50%, #38bdf8 100%);
-    --gradient-dark-card: linear-gradient(145deg, rgba(15, 23, 42, 0.8) 0%, rgba(10, 15, 29, 0.95) 100%);
-    --gradient-brand-subtle: linear-gradient(135deg, rgba(56, 189, 248, 0.12) 0%, rgba(99, 102, 241, 0.06) 100%);
-    --gradient-glow: radial-gradient(circle at center, rgba(56, 189, 248, 0.18) 0%, rgba(99, 102, 241, 0.05) 50%, transparent 70%);
-    --gradient-mesh: radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.12) 0px, transparent 50%),
-                     radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.10) 0px, transparent 50%),
-                     radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.08) 0px, transparent 50%),
-                     radial-gradient(at 0% 100%, rgba(139, 92, 246, 0.10) 0px, transparent 50%);
+    --color-blue-tint: rgba(252, 241, 208, 0.10);       /* Soft champagne glow fill */
+    --color-blue-tint-hover: rgba(252, 241, 208, 0.18); /* Hover state */
 
-    /* Modern Dark Glassmorphism System */
-    --glass-bg: rgba(15, 23, 42, 0.72);
-    --glass-bg-elevated: rgba(15, 23, 42, 0.88);
-    --glass-blur: blur(24px) saturate(190%);
-    --glass-border: 1px solid rgba(255, 255, 255, 0.10);
-    --glass-border-subtle: 1px solid rgba(255, 255, 255, 0.06);
-    --glass-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.6);
-    --glass-specular: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    /* Brand Gradients & Dynamic Mesh */
+    --gradient-brand: linear-gradient(135deg, #fcf1d0 0%, #ffffff 100%);
+    --gradient-creative: linear-gradient(135deg, #22396f 0%, #fcf1d0 100%);
+    --gradient-growth: linear-gradient(135deg, #0d1c42 0%, #22396f 50%, #fcf1d0 100%);
+    --gradient-energy: linear-gradient(135deg, #fcf1d0 0%, #ffffff 100%);
+    --gradient-fluid: linear-gradient(135deg, #22396f 0%, #fcf1d0 50%, #ffffff 100%);
+    --gradient-dark-card: linear-gradient(145deg, rgba(13, 28, 66, 0.94) 0%, rgba(34, 57, 111, 0.55) 100%);
+    --gradient-brand-subtle: linear-gradient(135deg, rgba(252, 241, 208, 0.14) 0%, rgba(34, 57, 111, 0.28) 100%);
+    --gradient-glow: radial-gradient(circle at center, rgba(252, 241, 208, 0.20) 0%, rgba(34, 57, 111, 0.18) 50%, transparent 70%);
+    --gradient-mesh: radial-gradient(at 0% 0%, rgba(252, 241, 208, 0.10) 0px, transparent 50%),
+                     radial-gradient(at 100% 0%, rgba(34, 57, 111, 0.25) 0px, transparent 50%),
+                     radial-gradient(at 100% 100%, rgba(252, 241, 208, 0.08) 0px, transparent 50%),
+                     radial-gradient(at 0% 100%, rgba(13, 28, 66, 0.35) 0px, transparent 50%);
 
-    /* Surface Hierarchy (Obsidian & Deep Space Modern Palette) */
-    --color-bg: #07090e;               /* Deep midnight obsidian page background */
-    --color-surface-base: #0b0f19;     /* Deep slate for alternating sections & cards */
-    --color-surface-card: #0f172a;     /* Deep space slate cards */
-    --color-surface-hover: #1e293b;    /* Smooth hover fill */
-    --color-surface-elevated: #111827; /* Elevated dialogs / drawers */
+    /* Modern Navy & Champagne Glassmorphism System */
+    --glass-bg: rgba(13, 28, 66, 0.82);
+    --glass-bg-elevated: rgba(34, 57, 111, 0.88);
+    --glass-blur: blur(24px) saturate(180%);
+    --glass-border: 1px solid rgba(252, 241, 208, 0.20);
+    --glass-border-subtle: 1px solid rgba(252, 241, 208, 0.12);
+    --glass-shadow: 0 16px 40px -8px rgba(1, 7, 54, 0.75);
+    --glass-specular: inset 0 1px 0 rgba(255, 255, 255, 0.18);
+
+    /* Surface Hierarchy (#010736, #0D1C42, #22396F) */
+    --color-bg: #010736;               /* Deepest Midnight Navy page background */
+    --color-surface-base: #0d1c42;     /* Rich Oxford Navy for alternating sections & footer */
+    --color-surface-card: #0d1c42;     /* Rich Oxford Navy cards */
+    --color-surface-hover: #22396f;    /* Royal Slate Blue hover fill */
+    --color-surface-elevated: #22396f; /* Royal Slate Blue elevated surfaces */
 
     /* Hairline Specular Borders */
-    --color-border-subtle: rgba(255, 255, 255, 0.07);
-    --color-border-default: rgba(255, 255, 255, 0.12);
-    --color-border-active: rgba(56, 189, 248, 0.4);
+    --color-border-subtle: rgba(252, 241, 208, 0.14);
+    --color-border-default: rgba(252, 241, 208, 0.25);
+    --color-border-active: rgba(252, 241, 208, 0.65);
 
-    /* Text Colors & WCAG AAA Contrast on Dark */
-    --color-text-primary: #f8fafc;     /* Crisp luminescent white (17.5:1 contrast on #07090e) */
-    --color-text-secondary: #94a3b8;   /* Balanced cool slate (7.2:1 contrast) */
-    --color-text-muted: #64748b;       /* Metadata zinc (4.6:1 contrast) */
-    --color-text-light: #ffffff;       /* Pure white */
-    --color-accent: #38bdf8;
-    --color-focus: #38bdf8;
-    --color-success: #10b981;
-    --color-error: #f43f5e;
+    /* Text Colors & WCAG AAA Contrast on Deep Navy */
+    --color-text-primary: #ffffff;                  /* Pure White (19.4:1 contrast on #010736) */
+    --color-text-secondary: rgba(252, 241, 208, 0.86); /* Soft Warm Champagne (14.8:1 contrast) */
+    --color-text-muted: rgba(255, 255, 255, 0.64);     /* Muted Pure White (8.2:1 contrast) */
+    --color-text-light: #ffffff;                    /* Pure White */
+    --color-accent: #fcf1d0;
+    --color-focus: #fcf1d0;
+    --color-success: #fcf1d0;
+    --color-error: #fcf1d0;
 
     /* Typography Families */
     --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -132,11 +139,11 @@
     --radius-full: 9999px;
 
     /* Modern Soft Shadows & Subtle Auras */
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
-    --shadow-md: 0 4px 16px -2px rgba(0, 0, 0, 0.5), 0 2px 6px -1px rgba(0, 0, 0, 0.4);
-    --shadow-lg: 0 20px 48px -10px rgba(0, 0, 0, 0.7), 0 6px 16px -2px rgba(56, 189, 248, 0.08);
-    --shadow-brand-glow: 0 10px 30px -8px rgba(56, 189, 248, 0.45);
-    --shadow-cyan-glow: 0 8px 28px -6px rgba(6, 182, 212, 0.4);
+    --shadow-sm: 0 2px 6px rgba(1, 7, 54, 0.55);
+    --shadow-md: 0 6px 20px -2px rgba(1, 7, 54, 0.65), 0 2px 8px -1px rgba(1, 7, 54, 0.5);
+    --shadow-lg: 0 20px 48px -10px rgba(1, 7, 54, 0.85), 0 6px 18px -2px rgba(252, 241, 208, 0.12);
+    --shadow-brand-glow: 0 10px 30px -8px rgba(252, 241, 208, 0.40);
+    --shadow-cyan-glow: 0 8px 28px -6px rgba(252, 241, 208, 0.35);
 
     /* Transitions & Motion */
     --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -149,7 +156,7 @@
     /* Layout Dimensions */
     --container-max: 76rem; /* 1216px */
     --container-narrow: 56rem; /* 896px */
-    --header-height: 4.25rem; /* 68px on mobile for optimal screen real estate */
+    --header-height: 4.25rem; /* 68px on mobile */
   }
 
   @media (min-width: 64rem) {

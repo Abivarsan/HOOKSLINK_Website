@@ -1,5 +1,5 @@
 /* ==========================================================================
-   HOOKSLINK - Services Page Styles (Modern Light Theme)
+   HOOKSLINK - Services Page Styles (Navy & Champagne Cream Palette)
    ========================================================================== */
 
 @layer pages {
@@ -34,7 +34,7 @@
     font-family: var(--font-heading);
     font-size: var(--fs-xs);
     font-weight: 700;
-    color: var(--color-royal-blue);
+    color: #fcf1d0;
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }

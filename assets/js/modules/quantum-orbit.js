@@ -40,12 +40,12 @@ export function initQuantumOrbit(container) {
     force: 8.5
   };
 
-  // Color palettes matching the design brief
+  // Color palettes matching the Navy & Champagne Cream brand palette
   const COLOR_PALETTES = [
-    { r: 224, g: 242, b: 254 }, // #E0F2FE Sky Blue (Core Stars)
-    { r: 56,  g: 189, b: 248 }, // #38BDF8 Turquoise (Plasma Streams)
-    { r: 252, g: 211, b: 77  }, // #FCD34D Warm Gold (Cosmic Core)
-    { r: 129, g: 140, b: 248 }  // #818CF8 Cyber Indigo (Deep Nebula Dust)
+    { r: 255, g: 255, b: 255 }, // #FFFFFF Pure White (Core Stars)
+    { r: 252, g: 241, b: 208 }, // #FCF1D0 Warm Champagne Cream (Primary Stardust Stream)
+    { r: 252, g: 241, b: 208 }, // #FCF1D0 Warm Champagne Cream (Cosmic Core)
+    { r: 34,  g: 57,  b: 111 }  // #22396F Royal Slate Blue (Deep Nebula Dust)
   ];
 
   // 3D Perspective Rotation Constants
@@ -263,7 +263,7 @@ export function initQuantumOrbit(container) {
           ctx.lineTo(proj.x, proj.y);
         }
       }
-      ctx.strokeStyle = `rgba(56, 189, 248, ${0.035 + (i % 2 === 0 ? 0.025 : 0)})`;
+      ctx.strokeStyle = `rgba(252, 241, 208, ${0.04 + (i % 2 === 0 ? 0.03 : 0)})`;
       ctx.stroke();
     }
 
@@ -284,7 +284,7 @@ export function initQuantumOrbit(container) {
         if (s === 0) ctx.moveTo(proj.x, proj.y);
         else ctx.lineTo(proj.x, proj.y);
       }
-      ctx.strokeStyle = o === 0 ? 'rgba(56, 189, 248, 0.14)' : 'rgba(129, 140, 248, 0.12)';
+      ctx.strokeStyle = o === 0 ? 'rgba(252, 241, 208, 0.16)' : 'rgba(34, 57, 111, 0.45)';
       ctx.stroke();
     }
 
